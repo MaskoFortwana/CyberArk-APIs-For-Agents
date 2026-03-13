@@ -1,0 +1,2315 @@
+{
+  "metadata": {
+    "name": "CyberArk PAM Self-Hosted API",
+    "description": "CyberArk PAM Self-Hosted (PVWA) REST API endpoints",
+    "default_base_url": "https://{pvwa_host}",
+    "source": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/"
+  },
+  "categories": [
+    {
+      "name": "Account Discovery",
+      "endpoint_count": 8
+    },
+    {
+      "name": "Account Groups",
+      "endpoint_count": 5
+    },
+    {
+      "name": "Accounts",
+      "endpoint_count": 23
+    },
+    {
+      "name": "Applications",
+      "endpoint_count": 5
+    },
+    {
+      "name": "Authentication",
+      "endpoint_count": 8
+    },
+    {
+      "name": "Branding & Themes",
+      "endpoint_count": 11
+    },
+    {
+      "name": "Bulk Upload Accounts",
+      "endpoint_count": 10
+    },
+    {
+      "name": "FIDO2 Devices",
+      "endpoint_count": 6
+    },
+    {
+      "name": "Groups",
+      "endpoint_count": 5
+    },
+    {
+      "name": "Just In Time Access",
+      "endpoint_count": 2
+    },
+    {
+      "name": "LDAP Integration",
+      "endpoint_count": 12
+    },
+    {
+      "name": "Linked Accounts",
+      "endpoint_count": 2
+    },
+    {
+      "name": "Monitor Sessions",
+      "endpoint_count": 12
+    },
+    {
+      "name": "OAuth 2.0 Providers",
+      "endpoint_count": 4
+    },
+    {
+      "name": "OPM Rules",
+      "endpoint_count": 2
+    },
+    {
+      "name": "OpenID Connect Providers",
+      "endpoint_count": 5
+    },
+    {
+      "name": "PTA Security Events",
+      "endpoint_count": 21
+    },
+    {
+      "name": "Platforms",
+      "endpoint_count": 27
+    },
+    {
+      "name": "Policies",
+      "endpoint_count": 4
+    },
+    {
+      "name": "Private SSH Authentication",
+      "endpoint_count": 10
+    },
+    {
+      "name": "Reports & Tasks",
+      "endpoint_count": 5
+    },
+    {
+      "name": "Requests",
+      "endpoint_count": 10
+    },
+    {
+      "name": "Safe Members",
+      "endpoint_count": 5
+    },
+    {
+      "name": "Safes",
+      "endpoint_count": 7
+    },
+    {
+      "name": "Security Settings",
+      "endpoint_count": 6
+    },
+    {
+      "name": "Server",
+      "endpoint_count": 12
+    },
+    {
+      "name": "Session Management",
+      "endpoint_count": 4
+    },
+    {
+      "name": "System Health",
+      "endpoint_count": 2
+    },
+    {
+      "name": "Users",
+      "endpoint_count": 10
+    }
+  ],
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/auth/Cyberark/Logon/",
+      "summary": "CyberArk, LDAP, RADIUS, Windows",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/cyberark authentication - logon_v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/auth/SAML/Logon/",
+      "summary": "SAML logon",
+      "category_id": 5,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/saml_ authentication_ logon_newgen.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/getauthtoken/",
+      "summary": "PTA Authentication",
+      "category_id": 5,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/logonpta.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/auth/Shared/RestfulAuthenticationService.svc/Logon/",
+      "summary": "Shared logon authentication",
+      "category_id": 5,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/shared logon authentication - logon.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Auth/Logoff/",
+      "summary": "CyberArk, LDAP, RADIUS, Windows",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-logoff.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/auth/Shared/RestfulAuthenticationService.svc/Logoff/",
+      "summary": "Shared logoff",
+      "category_id": 5,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/shared logon authentication - logoff.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/OIDCprovider/",
+      "summary": "Add OpenID Connect Identity Provider",
+      "category_id": 16,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-oidcaddprvd.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/OIDCprovider/{id}/",
+      "summary": "Update OpenID Connect Identity Provider",
+      "category_id": 16,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-oidcupdprvd.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/OIDCprovider/",
+      "summary": "Get all OpenID Connect Identity Providers",
+      "category_id": 16,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-oidcgetllprvd.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/OIDCprovider/{id}/",
+      "summary": "Get specific OpenID Connect Identity Provider",
+      "category_id": 16,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-oidcgetoneprvd.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/OIDCprovider/{id}/",
+      "summary": "Delete OpenID Connect Identity Provider",
+      "category_id": 16,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-oidcdelprvd.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/OAuthPrv/",
+      "summary": "Add OAuth 2.0 provider",
+      "category_id": 14,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-oauthaddprvd.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/OAuthPrv/{id}/",
+      "summary": "Update OAuth 2.0 provider",
+      "category_id": 14,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-oauthupdateprv.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/OAuthPrv/",
+      "summary": "Get all OAuth 2.0 providers",
+      "category_id": 14,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-oauthgetllprv.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/OAuthPrv/{id}/",
+      "summary": "Delete OAuth 2.0 provider",
+      "category_id": 14,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-oauthdltPrv.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/{userID}/FIDO2devices",
+      "summary": "Register FIDO2 device",
+      "category_id": 8,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-fidio2regdev.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/me/FIDO2devices",
+      "summary": "Register own FIDO2 device",
+      "category_id": 8,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-fidio2regdev2own.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/{userID}/FIDO2devices",
+      "summary": "Start FIDO2 registration",
+      "category_id": 8,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-fidio2startregdev2.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/me/FIDO2devices",
+      "summary": "Start own FIDO2 registration",
+      "category_id": 8,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-fidio2startregdev2own.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Users/{userID}/FIDO2devices",
+      "summary": "Remove FIDO2 device",
+      "category_id": 8,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-fidio2regdev-removedevice2.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Users/me/FIDO2devices",
+      "summary": "Remove own FIDO2 device",
+      "category_id": 8,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/authn-fidio2regdev-removeowndevice2.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/verify",
+      "summary": "Verify",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server web services - verify.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Logo",
+      "summary": "Logo",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server web services - logo.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/ComponentsMonitoringSummary",
+      "summary": "Get System Health summary",
+      "category_id": 28,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/systemsummary.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/ComponentsMonitoringDetails/{ComponentID}",
+      "summary": "Get System Health details",
+      "category_id": 28,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/systemdetails.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Server/",
+      "summary": "Server",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server web services - server.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/VaultActions/GetServiceConfig",
+      "summary": "Get all configuration values",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server-api-vrm-get-service-config.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/VaultActions/GetServiceConfig/{parameterName}",
+      "summary": "Get specific configuration parameter value",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server-api-vrm-get-service-config-parameter.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/VaultActions/GetServiceStatus",
+      "summary": "Get service status",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server-api-vrm-get-service-status.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/VaultActions/GetFeatureFlag",
+      "summary": "Get feature flag",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server-api-vrm-get-feature-flag.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/VaultActions/SetFeatureActivate",
+      "summary": "Set feature activate",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server-api-vrm-set-feature-activate.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/VaultActions/SetFeatureDeactivated",
+      "summary": "Set feature deactivate",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server-api-vrm-set-feature-deactivate.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/VaultActions/SetConfig",
+      "summary": "Set configuration parameter",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/server-api-vrm-set-config.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/VaultActions/FlushTokens",
+      "summary": "Flush tokens",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/flush-tokens.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Users/",
+      "summary": "Get users",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getusers-v10temp.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Users/{UserID}/",
+      "summary": "Get user details",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getuser-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/",
+      "summary": "Add user",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addusers-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/Users/{UserID}/",
+      "summary": "Update user",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/updateusers v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Users/{UserID}/",
+      "summary": "Delete user",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/deleteuser-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/{UserID}/Activate/",
+      "summary": "Activate user",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/activate-user-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/{UserID}/enable/",
+      "summary": "Enable user",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/enable-user.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/{UserID}/disable/",
+      "summary": "Disable user",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/disable-user.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/{UserID}/ResetPassword/",
+      "summary": "Reset user password",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/reset-user-password.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/UserGroups/",
+      "summary": "Get groups",
+      "category_id": 9,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getgroupsfromvault.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/UserGroups/{ID}/",
+      "summary": "Get group details",
+      "category_id": 9,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getgrou`details.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/UserGroups/",
+      "summary": "Create group",
+      "category_id": 9,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/creategroup v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/UserGroups/{id}/",
+      "summary": "Update group",
+      "category_id": 9,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/updategroup v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/UserGroups/{id}/Members/",
+      "summary": "Add member to group",
+      "category_id": 9,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addmembertogroup v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/UserGroups/{groupID}/Members/{member}/",
+      "summary": "Remove user from group",
+      "category_id": 29,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/removeuserfromgroup.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Users/{UserName}/AuthenticationMethods/SSHKeyAuthentication/AuthorizedKeys",
+      "summary": "Get public SSH keys",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get public ssh keys.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Users/{UserName}/AuthenticationMethods/SSHKeyAuthentication/AuthorizedKeys",
+      "summary": "Add a public SSH key",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/add public ssh keys.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Users/{UserName}/AuthenticationMethods/SSHKeyAuthentication/AuthorizedKeys/{KeyID}",
+      "summary": "Get specific public SSH key",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get one public ssh key.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Users/{UserName}/AuthenticationMethods/SSHKeyAuthentication/AuthorizedKeys/{KeyID}",
+      "summary": "Delete a public SSH key",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete public ssh keys.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/Secret/SSHKeys/Cache",
+      "summary": "Generate MFA caching SSH key for the connected user",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/generate mfa caching ssh key.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/{userID}/Secret/SSHKeys/Cache",
+      "summary": "Generate MFA caching SSH key for another user",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/generate mfa caching ssh key for another user.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Users/Secret/SSHKeys/Cache",
+      "summary": "Delete MFA caching SSH key for connected user",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete mfa caching ssh key.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Users/{userID}/Secret/SSHKeys/Cache",
+      "summary": "Delete MFA caching SSH key for another user",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete mfa caching ssh key for another user.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Users/Secret/SSHKeys/Cache",
+      "summary": "Get MFA caching SSH key for connected user",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get mfa caching ssh key.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Users/{userID}/Secret/SSHKeys/Cache",
+      "summary": "Get MFA caching SSH key for another user",
+      "category_id": 20,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get mfa caching ssh key for another user.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/LDAPDirectiries/",
+      "summary": "Get directories",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-directories.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/LDAPDirectiries/{directoryName}/Mappings/",
+      "summary": "Get directory mappings",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-directory-mappings.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Configuration/LDAPDirectiries/",
+      "summary": "Create directory",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/create-directory.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Configuration/LDAPDirectiries/{directoryName}/Mappings/",
+      "summary": "Create directory mapping",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/create-directory-mapping.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Configuration/LDAPDirectiries/{directoryName}/Mappings/{mappingID}/",
+      "summary": "Delete directory mapping",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete-directory-mapping.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/Configuration/LDAPDirectiries/{directoryName}/Mappings/{mappingID}/",
+      "summary": "Edit directory mapping",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/edit-directory-mapping.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/Configuration/LDAPDirectiries/{directoryName}/Mappings/{mappingID}/Reconnect",
+      "summary": "Reorder directory mappings",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/reconnect-to-ldap-directory.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Configuration/LDAPDirectiries/{directoryName}/Mappings/{mappingID}/",
+      "summary": "Get mapping details",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-mapping-details.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Safes",
+      "summary": "Add Safe",
+      "category_id": 24,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addsafe-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/Safes/{safeUrlId}/",
+      "summary": "Update Safe",
+      "category_id": 24,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/updatesafe  v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Safes/{safeUrlId}/",
+      "summary": "Delete Safe",
+      "category_id": 24,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/deletesafe.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Safes?search={querystring}/",
+      "summary": "Search for a Safe",
+      "category_id": 24,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/search-safe.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Safes/{safeUrlId}/",
+      "summary": "Get Safe details",
+      "category_id": 24,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getsafedetails-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Safes/",
+      "summary": "Get all Safes",
+      "category_id": 24,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-all-safes.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Platforms/{PlatformID}/Safes/",
+      "summary": "Get Safes by platform",
+      "category_id": 24,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-safes-by-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Safes/{safeUrlId}/Members/",
+      "summary": "Add Safe member",
+      "category_id": 23,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/safe members ws - add safe   member.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/Safes/{SafeUrlId}/Members/{MemberName}/",
+      "summary": "Update Safe member",
+      "category_id": 23,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/safe members ws - update safe  member.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Safes/{SafeUrlId}/Members/{MemberName}/",
+      "summary": "Delete Safe member",
+      "category_id": 23,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/safe members ws - delete safe  member.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Safes/{SafeUrlId}/Members/{MemberName}/",
+      "summary": "Get Safe member",
+      "category_id": 23,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/safe members ws - get safe member.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Safes/{SafeUrlId}/Members/",
+      "summary": "Get all Safe members",
+      "category_id": 23,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/safe members ws - list safe members.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/ConnectionComponents/Import/",
+      "summary": "Import connection component",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/importconncomponent.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/PSM/Connectors/",
+      "summary": "Get all connection components",
+      "category_id": 27,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/session mngmnt - get_all_connection_components.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/PSM/Servers/",
+      "summary": "Get all PSM servers",
+      "category_id": 27,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/session mngmnt - get_all_psm_servers.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Platforms/Targets/",
+      "summary": "Get target platforms",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-get-target-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/targets/{ID}/duplicate/",
+      "summary": "Duplicate target platforms",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-duplicate-target-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/targets/{ID}/activate/",
+      "summary": "Activate target platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-activate-target-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/platforms/targets/{ID}/deactivate/",
+      "summary": "Deactivate target platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-deactivate-target-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/platforms/targets/{ID}/",
+      "summary": "Update target platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-update-target-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/platforms/targets/{ID}/",
+      "summary": "Delete target platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-delete-target-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Platforms/Dependents/",
+      "summary": "Get dependent platforms",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-get-dependent-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/dependents/{ID}/duplicate/",
+      "summary": "Duplicate dependent platforms",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-duplicate-dependent-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Platforms/Dependents/{ID}/",
+      "summary": "Delete dependent platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-delete-dependent-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/platforms/groups/",
+      "summary": "Get group platforms",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-get-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/groups/{ID}/duplicate/",
+      "summary": "Duplicate group platforms",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-duplicate-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/groups/{ID}/activate/",
+      "summary": "Activate group platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-activate-group-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/groups/{ID}/deactivate/",
+      "summary": "Deactivate group platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-deactivate-group-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/platforms/groups/{ID}/",
+      "summary": "Delete group platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-delete-goup-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/",
+      "summary": "Get rotational group platforms",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-get-rotational-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/duplicate/",
+      "summary": "Duplicate rotational group platforms",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-duplicate-rotational-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/activate/",
+      "summary": "Activate rotational group platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-activate-rotational-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/deactivate/",
+      "summary": "Deactivate rotational group platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-deactivate-rotational-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/",
+      "summary": "Delete rotational group platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/rest-api-delete-rotational-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Platforms",
+      "summary": "Get platforms",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Platforms/{PlatformName}/",
+      "summary": "Get platform details",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-platform-details.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Platforms/Import",
+      "summary": "Import platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/import platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Platforms/{platformId}/Export",
+      "summary": "Export platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/export platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Platforms/Storage",
+      "summary": "Delete stored platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/deletestoredplatform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Platforms/{platformId}/Update",
+      "summary": "Update platform with stored platform",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/updateplatformwithstoredplatform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PATCH",
+      "path": "/PasswordVault/API/Platforms/Import/",
+      "summary": "Import stored platform alongside existing platform (patch)",
+      "category_id": 18,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/importstoredplatformpatch.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Policies/{policyId}",
+      "summary": "Get Policy by ID",
+      "category_id": 19,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-policy-by-id.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/Policies/{policyId}",
+      "summary": "Update Policy by ID",
+      "category_id": 19,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/update-policy-by-id.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Policies/{policyID}/PrivilegedCommandRules/",
+      "summary": "Get privileged command rules",
+      "category_id": 19,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-privileged-command-rules.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Policies/{policyID}/PrivilegedCommandRules/",
+      "summary": "Add privileged command rule",
+      "category_id": 19,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/add-privileged-command-rule.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Accounts/",
+      "summary": "Get accounts",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get accounts v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/",
+      "summary": "Add account",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addaccount v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Accounts/{id}/",
+      "summary": "Get account details",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get account details v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Accounts/{id}/",
+      "summary": "Delete account",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete-account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PATCH",
+      "path": "/PasswordVault/API/Accounts/{AccountID}/",
+      "summary": "Update account",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/update account-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Accounts/{AccountID}/Activities",
+      "summary": "Get account activity",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-account-activity.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Safes/{safeUrlId}/Accounts/{AccountID}/AdvProps/",
+      "summary": "Get advanced search properties",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-adv-search-props.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Accounts/",
+      "summary": "Get secret versions",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-secret-versions.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/",
+      "summary": "Get Just in Time access",
+      "category_id": 10,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-jit-access.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Accounts/",
+      "summary": "Revoke Just in Time access",
+      "category_id": 10,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/revoke-jit-access.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{AccountID}/Verify/",
+      "summary": "Verify credentials",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/verify-credentials-v9-10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{AccountID}/Change/",
+      "summary": "Change credentials immediately",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/change-credentials-immediately.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/",
+      "summary": "Set next password",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/setnextpassword.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/",
+      "summary": "Change credentials in the Vault",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/changecredentialsinvault.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{AccountID}/Reconcile/",
+      "summary": "Reconcile credentials",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/reconcile-account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{AccountID}/PSMConnect",
+      "summary": "Connect using PSM",
+      "category_id": 27,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/connect using psm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/AdHocConnect",
+      "summary": "Ad hoc connect using PSM",
+      "category_id": 27,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/ad-hoc-connect using psm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{AccountID}/Passwd/Retrieve/",
+      "summary": "Get password value",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get passwd v 10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/",
+      "summary": "Generate password",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/generate-password.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{AccountID}/Secret/Retrieve",
+      "summary": "Retrieve private SSH key account",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get private ssh key value.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{AccountID}/CheckIn/",
+      "summary": "Check in an exclusive account",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/checkin exclusive vi10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{accountId}/LinkAccount",
+      "summary": "Link an account",
+      "category_id": 12,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/link account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Accounts/{accountId}/LinkAccount/{extraPasswordIndex}",
+      "summary": "Unlink an account",
+      "category_id": 12,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/unlink account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{Account_ID}/dependentAccounts/",
+      "summary": "Add dependent account",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/add-dependent-account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Accounts/{Account_ID}/dependentAccounts/",
+      "summary": "Get dependent accounts",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-dependent-accounts.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/Accounts/accountId/dependentAccounts/{dependentAccountId}",
+      "summary": "Update dependent account",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/update-dependent-account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/Accounts/{Account_ID}/dependentAccounts/{dependentAccountId}",
+      "summary": "Delete dependent account",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete-dependent-account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{Account_ID}/dependentAccounts/{dependentAccountId}/Sync",
+      "summary": "Sync dependent account secret",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/sync-dependent-account-secret.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{Account_ID}/dependentAccounts/{dependentAccountId}/Verify",
+      "summary": "Verify dependent account secret",
+      "category_id": 3,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/verify-dependent-account-secret.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/AccountGroups?Safe=",
+      "summary": "Get account group by Safe",
+      "category_id": 2,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getaccountgroupbysafe.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/AccountGroups/{GroupID}/Members",
+      "summary": "Get account group members",
+      "category_id": 2,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getaccountgroupmembers.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AccountGroups",
+      "summary": "Add account group",
+      "category_id": 2,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addaccountgroup.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AccountGroups/{GroupID}/Members",
+      "summary": "Add member to account group",
+      "category_id": 2,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addaccounttoaccountgroup.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/AccountGroups/{GroupID}/Members/{AccountID}",
+      "summary": "Delete member from account group",
+      "category_id": 2,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/deletememberfromaccountgroup.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/bulkactions/accounts/",
+      "summary": "Create bulk upload of accounts",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/create-bulk-account-upload-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/bulkactions/accounts/",
+      "summary": "Get all bulk account uploads for user",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-all-bulk-account-uploads-for-user-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/bulkactions/accounts/{id}/",
+      "summary": "Get bulk account upload result",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-bulk-account-upload-result-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/bulkactions/verify",
+      "summary": "Verify all credentials",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/bulk-verify-credentials.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/bulkactions/change",
+      "summary": "Change all credentials immediately",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/bulk-change-credentials.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/bulkactions/reconcile",
+      "summary": "Reconcile all credentials",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/bulk-reconcile-credentials.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/bulkactions/{ActionID}",
+      "summary": "Get bulk actions",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-bulk-actions.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/bulkactions/{accountId}/change/",
+      "summary": "Change credentials for specific account",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/bulk-change-credentials-single.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/bulkactions/{accountId}/reconcile/",
+      "summary": "Reconcile credentials for specific account",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/bulk-reconcile-credentials-single.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/bulkactions/{accountId}/verify/",
+      "summary": "Verify credentials for specific account",
+      "category_id": 7,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/bulk-verify-credentials-single.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/DiscoveredAccounts/",
+      "summary": "Add discovered accounts",
+      "category_id": 1,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/add-discovered-accounts.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/DiscoveredAccounts/",
+      "summary": "Get discovered accounts",
+      "category_id": 1,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-discovered-accounts.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/DiscoveredAccounts/{id}/",
+      "summary": "Get discovered account details",
+      "category_id": 1,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-discovered-account-details.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/DiscoveredAccounts/",
+      "summary": "Delete discovered accounts",
+      "category_id": 1,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete-discovered-accounts.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/AutomaticOnboardingRules/",
+      "summary": "Get onboarding rules",
+      "category_id": 1,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get onboarding rules.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AutomaticOnboardingRules/",
+      "summary": "Add onboarding rule",
+      "category_id": 1,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/add onboarding rule.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/AutomaticOnboardingRules/{RuleID}/",
+      "summary": "Update onboarding rule",
+      "category_id": 1,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/update onboarding rule.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/AutomaticOnboardingRules/{ID}/",
+      "summary": "Delete onboarding rule",
+      "category_id": 1,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete onboarding rule.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/MyRequests/",
+      "summary": "Create access request",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/create access requests.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/myrequests/",
+      "summary": "Get my requests",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get my requests.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/myrequests/{RequestID}",
+      "summary": "Get details of My Requests",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getdetailsmyrequest.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/MyRequests/",
+      "summary": "Create access request for multiple accounts",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/create-multiple-requests.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/bulkactions/{id}/",
+      "summary": "Get multiple account access status",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/create-multiple-requests-get-status.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/myrequests/{RequestID}",
+      "summary": "Delete my request",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/deletemyrequest.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/IncomingRequests?onlywaiting={bool}&expired={bool}",
+      "summary": "Get incoming requests",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get incoming requests.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/incomingrequests/{RequestID}/",
+      "summary": "Get details of incoming request",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get incoming requests details.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/incomingrequests/{RequestID}/confirm/",
+      "summary": "Confirm access request",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/confirm access requests.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/incomingrequests/{RequestID}/reject/",
+      "summary": "Reject a request",
+      "category_id": 22,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/reject requests.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/LiveSessions/",
+      "summary": "Get active sessions",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get active sessions.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/LiveSessions/{liveSessionId}/",
+      "summary": "Get active session",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get active session.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/LiveSessions/{liveSessionId}/activities/",
+      "summary": "Get active session activities",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-active-session-activities.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/LiveSessions/{liveSessionId}/properties/",
+      "summary": "Get active session properties",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-active-session-properties.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/LiveSessions/{liveSessionId}/Monitor/",
+      "summary": "Monitor session",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/pta-psm-monitorsession.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/LiveSessions/",
+      "summary": "Suspend/resume session",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/pta-psm-suspendsession.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/LiveSessions/",
+      "summary": "Terminate an active session",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/pta-psm-terminatesession.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/recordings/",
+      "summary": "Get recordings",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getrecordings.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/recordings/{recordingId}/",
+      "summary": "Get recording details",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getrecording.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/recordings/{recordingId}/properties/",
+      "summary": "Get recording properties",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getrecordingproperties.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/recordings/{recordingId}/activities/",
+      "summary": "Get recording activities",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getrecordingactivities.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/recordings/{recordingId}/play/",
+      "summary": "Play recording",
+      "category_id": 13,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/playrecording.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/pta/API/Risks/RisksEventsLastUpdated/",
+      "summary": "Get risks summary",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getrisxeventsusummary.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/pta/API/Risks/RiskEvents/",
+      "summary": "Get risk events",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getriskevents.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PATCH",
+      "path": "/PasswordVault/API/pta/API/Risks/RiskEvents/",
+      "summary": "Update risk event status",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/closeopenriskevent.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/pta/API/Settings",
+      "summary": "Get security settings",
+      "category_id": 25,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getsettings.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/pta/API/Settings/AutomaticRemediations/",
+      "summary": "Update security remediation settings",
+      "category_id": 25,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/automaticremediation_updateconfiguration.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/pta/API/Settings/RiskyActivity/",
+      "summary": "Add suspicious activities rule",
+      "category_id": 25,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addnewrule.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/pta/API/Settings/RiskyActivity/{id}",
+      "summary": "Update suspicious activities rule",
+      "category_id": 25,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/updateriskyactivity.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/pta/API/SecurityEvents/",
+      "summary": "Get security events",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getptasecevents.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/pta/API/SecurityEvents/",
+      "summary": "Add security event",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addptasecevent.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PATCH",
+      "path": "/PasswordVault/API/pta/API/SecurityEvents/{id}/",
+      "summary": "Update security event",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/updateptasecevet.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/pta/API/SecurityEvents/{id}/remediations",
+      "summary": "Add remediation to an event",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addptared.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/pta/API/AllowedProcesses",
+      "summary": "Get allowed processes",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/allowedprocesses.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/pta/API/AllowedProcesses",
+      "summary": "Add allowed process",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/allowedprocessesadd.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/pta/API/AllowedProcesses/{id}",
+      "summary": "Remove allowed process",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/allowedprocessesdel.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/pta/API/AllowedProcesses/{id}",
+      "summary": "Get allowed process details",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/allowedprocessesget.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PATCH",
+      "path": "/PasswordVault/API/pta/API/AllowedProcesses/{id}",
+      "summary": "Update allowed process",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/allowedprocessesupdated.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/pta/API/configuration/properties/",
+      "summary": "Get PTA security configuration properties",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getsecurityoproperties.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/pta/API/configuration/properties/{propertyKey}",
+      "summary": "Update PTA security configuration property",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/updatesecurityoproperty.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/pta/API/configuration/properties/{propertyKey}",
+      "summary": "Delete PTA security configuration property",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/deletesecurityproperty.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/pta/API/configuration/properties/{propertyKey}/default",
+      "summary": "Reset PTA security configuration property",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/resetsecurityproperty.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/pta/API/configuration/properties/{categoryKey}",
+      "summary": "Reset PTA security configuration category",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/resetsecuritycategory.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/encryptionkey",
+      "summary": "Get Server encryption key",
+      "category_id": 26,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/serverencryption.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/getauthtoken",
+      "summary": "PTA Server authentication",
+      "category_id": 5,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/serverauth.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/NetworkAreas/",
+      "summary": "Get Network Areas",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getnetworkareas.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/NetworkAreas/{NetworkAreaIde}/",
+      "summary": "Update Network Area",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/updatenetworkarea.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/NetworkAreas/",
+      "summary": "Add Network Area",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addnetworkarea.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/NetworkAreas/{NetworkAreaIde2}/",
+      "summary": "Delete Network Area",
+      "category_id": 17,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/deletenetworkarea.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/",
+      "summary": "Get applications",
+      "category_id": 4,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get-apps.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/",
+      "summary": "Add application",
+      "category_id": 4,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/add a specific app in vi.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/{AppID}/",
+      "summary": "Get application details",
+      "category_id": 4,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get a specific application.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/{AppID}/Authentications/",
+      "summary": "Get application authentication methods",
+      "category_id": 4,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/get a specific application authentications.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/{AppID}/Authentications/",
+      "summary": "Add application authentication method",
+      "category_id": 5,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/add a specific authentication.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/{AppID}/",
+      "summary": "Delete application",
+      "category_id": 4,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete a specific app lication.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/{AppID}/Authentications/{AuthID/}",
+      "summary": "Delete application authentication method",
+      "category_id": 5,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/delete a specific authentication.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Policy/{PolicyId}/PrivilegedCommands/",
+      "summary": "Get OPM rules",
+      "category_id": 15,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/list policy acl.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Policy/{PolicyId}/PrivilegedCommands/{CommandID}",
+      "summary": "Update OPM rule",
+      "category_id": 15,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/update command in policy acl.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/AllowedReferrer/",
+      "summary": "Get allowed referrers",
+      "category_id": 25,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getallowedreferrer.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AllowedReferrer/",
+      "summary": "Add allowed referrer",
+      "category_id": 25,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addallowedreferrer.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/clientIds",
+      "summary": "Get client IDs",
+      "category_id": 5,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getclientids.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/SystemImages/",
+      "summary": "Add an image to the system",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addimage.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/SystemImages/{imageName}/",
+      "summary": "Retrieve an image",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getimage.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/CustomThemes/{themeID}/Activate/",
+      "summary": "Activate a custom theme",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/activatectm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/CustomThemes/",
+      "summary": "Create a custom theme",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/createctm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/CustomThemes/{themeID}/Deactivate/",
+      "summary": "Deactivate a custom theme",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/deactivatetm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "DELETE",
+      "path": "/PasswordVault/API/CustomThemes/{themeID}/",
+      "summary": "Delete a custom theme",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/deletectm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/CustomThemes/Active",
+      "summary": "Retrieve the current active custom theme",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getactivectm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/CustomThemes/",
+      "summary": "Return a list of available custom themes",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getallctm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/CustomThemes/{themeID}/",
+      "summary": "Retrieve a custom theme",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getctm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/CustomThemes/{themeID}/",
+      "summary": "Update a custom theme",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/updatectm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "PUT",
+      "path": "/PasswordVault/API/CustomThemes/{themeID}/",
+      "summary": "Update the draft state of a custom theme",
+      "category_id": 6,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/drafttm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Reports/",
+      "summary": "Get reports",
+      "category_id": 21,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getreports.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Activities/",
+      "summary": "Get activities",
+      "category_id": 21,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getactivitis.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Tasks/",
+      "summary": "Get tasks",
+      "category_id": 21,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/gettasks.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Tasks/",
+      "summary": "Create tasks",
+      "category_id": 21,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/createtask.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Reports/",
+      "summary": "Download report",
+      "category_id": 21,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/downloadreport.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/configuration/GlobalCatalog/",
+      "summary": "Get Global Catalog connectivity details",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/getglobalcatalog.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/configuration/GlobalCatalog/",
+      "summary": "Add Global Catalog connectivity details",
+      "category_id": 11,
+      "base_url": "https://{pvwa_host}",
+      "doc_url": "https://docs.cyberark.com/pam-self-hosted/latest/en/content/webservices/addglobalcatalog.htm",
+      "deprecated": 0
+    }
+  ]
+}

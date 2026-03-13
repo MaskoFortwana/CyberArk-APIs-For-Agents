@@ -1,0 +1,2084 @@
+{
+  "metadata": {
+    "name": "CyberArk Identity API",
+    "description": "CyberArk Identity Platform REST API endpoints",
+    "default_base_url": "https://{tenant}/api",
+    "source": "https://api-docs.cyberark.com/identity-docs-api/docs/"
+  },
+  "categories": [
+    {
+      "name": "OAuth2 API",
+      "slug": "oauth2-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api",
+      "endpoint_count": 10
+    },
+    {
+      "name": "CDirectory Service API",
+      "slug": "cdirectory-service-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api",
+      "endpoint_count": 15
+    },
+    {
+      "name": "Core API",
+      "slug": "core-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api",
+      "endpoint_count": 10
+    },
+    {
+      "name": "Auth Profile API",
+      "slug": "auth-profile-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/auth-profile-api",
+      "endpoint_count": 4
+    },
+    {
+      "name": "External Data API",
+      "slug": "ext-data-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/ext-data-api",
+      "endpoint_count": 4
+    },
+    {
+      "name": "User Management API",
+      "slug": "user-mgmt-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api",
+      "endpoint_count": 20
+    },
+    {
+      "name": "Roles API",
+      "slug": "roles-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/roles-api",
+      "endpoint_count": 8
+    },
+    {
+      "name": "Tenant CNames API",
+      "slug": "tenant-cnames-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-cnames-api",
+      "endpoint_count": 5
+    },
+    {
+      "name": "Policy API",
+      "slug": "policy-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/policy-api",
+      "endpoint_count": 5
+    },
+    {
+      "name": "Security API",
+      "slug": "security-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api",
+      "endpoint_count": 14
+    },
+    {
+      "name": "Tenant Config API",
+      "slug": "tenant-config-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-config-api",
+      "endpoint_count": 8
+    },
+    {
+      "name": "UP REST API",
+      "slug": "up-rest-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api",
+      "endpoint_count": 26
+    },
+    {
+      "name": "SaaS Manage API",
+      "slug": "saas-manage-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api",
+      "endpoint_count": 15
+    },
+    {
+      "name": "U2F API",
+      "slug": "u2f-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/u2f-api",
+      "endpoint_count": 5
+    },
+    {
+      "name": "Device API",
+      "slug": "device-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/device-api",
+      "endpoint_count": 2
+    },
+    {
+      "name": "Mobile API",
+      "slug": "mobile-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/mobile-api",
+      "endpoint_count": 2
+    },
+    {
+      "name": "Org API",
+      "slug": "org-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api",
+      "endpoint_count": 11
+    },
+    {
+      "name": "User API",
+      "slug": "user-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/user-api",
+      "endpoint_count": 2
+    },
+    {
+      "name": "SysInfo API",
+      "slug": "sysinfo-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/sysinfo-api",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Job Flow API",
+      "slug": "job-flow-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/job-flow-api",
+      "endpoint_count": 5
+    },
+    {
+      "name": "Task API",
+      "slug": "task-api",
+      "docs_url": "https://api-docs.cyberark.com/identity-docs-api/docs/task-api",
+      "endpoint_count": 2
+    }
+  ],
+  "tags": [
+    {
+      "name": "OAuth & OpenID Connect",
+      "category_id": 1
+    },
+    {
+      "name": "Create Users",
+      "category_id": 2
+    },
+    {
+      "name": "Bulk Import",
+      "category_id": 2
+    },
+    {
+      "name": "Manage User Data",
+      "category_id": 2
+    },
+    {
+      "name": "Manage User Attributes",
+      "category_id": 2
+    },
+    {
+      "name": "Update User",
+      "category_id": 2
+    },
+    {
+      "name": "Manage User Password",
+      "category_id": 2
+    },
+    {
+      "name": "Manage User Picture",
+      "category_id": 2
+    },
+    {
+      "name": "Delete User",
+      "category_id": 2
+    },
+    {
+      "name": "Locked Users",
+      "category_id": 2
+    },
+    {
+      "name": "Manage Tenant Configuration",
+      "category_id": 3
+    },
+    {
+      "name": "Passwords",
+      "category_id": 3
+    },
+    {
+      "name": "Role Management",
+      "category_id": 3
+    },
+    {
+      "name": "Manage User Data",
+      "category_id": 3
+    },
+    {
+      "name": "Manage Tenant Aliases",
+      "category_id": 3
+    },
+    {
+      "name": "Authentication Profile",
+      "category_id": 4
+    },
+    {
+      "name": "Manage User Attributes",
+      "category_id": 5
+    },
+    {
+      "name": "Manage User Data",
+      "category_id": 5
+    },
+    {
+      "name": "Logout",
+      "category_id": 6
+    },
+    {
+      "name": "Manage Security Questions",
+      "category_id": 6
+    },
+    {
+      "name": "Manage User Attributes",
+      "category_id": 6
+    },
+    {
+      "name": "User Roles And Administrative Rights",
+      "category_id": 6
+    },
+    {
+      "name": "Manage User Password",
+      "category_id": 6
+    },
+    {
+      "name": "Mobile Authenticator",
+      "category_id": 6
+    },
+    {
+      "name": "Locked Users",
+      "category_id": 6
+    },
+    {
+      "name": "Manage OATH Tokens",
+      "category_id": 6
+    },
+    {
+      "name": "Manage User Cloud Lock",
+      "category_id": 6
+    },
+    {
+      "name": "Role Management",
+      "category_id": 7
+    },
+    {
+      "name": "Manage Tenant Cnames",
+      "category_id": 8
+    },
+    {
+      "name": "Policy Management",
+      "category_id": 9
+    },
+    {
+      "name": "Login",
+      "category_id": 10
+    },
+    {
+      "name": "Customization",
+      "category_id": 11
+    },
+    {
+      "name": "Manage Tenant Configuration",
+      "category_id": 11
+    },
+    {
+      "name": "Manage Security Questions",
+      "category_id": 11
+    },
+    {
+      "name": "users",
+      "category_id": 12
+    },
+    {
+      "name": "Application Management",
+      "category_id": 12
+    },
+    {
+      "name": "Secured Items",
+      "category_id": 12
+    },
+    {
+      "name": "User Portal",
+      "category_id": 12
+    },
+    {
+      "name": "Application Management",
+      "category_id": 13
+    },
+    {
+      "name": "Certificate Management",
+      "category_id": 13
+    },
+    {
+      "name": "Active Directory Management",
+      "category_id": 13
+    },
+    {
+      "name": "Login",
+      "category_id": 14
+    },
+    {
+      "name": "Manage U2F Devices",
+      "category_id": 14
+    },
+    {
+      "name": "Manage Mobile Devices",
+      "category_id": 15
+    },
+    {
+      "name": "Manage Mobile Devices",
+      "category_id": 16
+    },
+    {
+      "name": "Organization Management",
+      "category_id": 17
+    },
+    {
+      "name": "Manage User Data",
+      "category_id": 18
+    },
+    {
+      "name": "Signup",
+      "category_id": 18
+    },
+    {
+      "name": "Manage Tenant Configuration",
+      "category_id": 19
+    },
+    {
+      "name": "Workflow Management",
+      "category_id": 20
+    },
+    {
+      "name": "Workflow Management",
+      "category_id": 21
+    }
+  ],
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/OAuth2/Keys/{app_id}",
+      "summary": "Get JWT keys",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/OAuth2/Metadata",
+      "summary": "Get metadata",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/OAuth2/Authorize/{app_id}",
+      "summary": "Authorize",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/OAuth2/Confirm/{app_id}",
+      "summary": "Confirm user consent",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/OAuth2/Token/{app_id}",
+      "summary": "Token request",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/OAuth2/UserInfo/{app_id}",
+      "summary": "UserInfo",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/OAuth2/Introspect/{app_id}",
+      "summary": "Introspect tokens",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/OAuth2/Revoke/{app_id}",
+      "summary": "Revoke tokens",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/OAuth2/EndSession/{app_id}",
+      "summary": "Deprecated -- End user session",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 1,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/OAuth2/EndSession/{app_id}/V2",
+      "summary": "Logs the user out - ends an OIDC session",
+      "category_id": 1,
+      "tag_id": 1,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/oauth2-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/CreateUser",
+      "summary": "Create user",
+      "category_id": 2,
+      "tag_id": 2,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/GetUsersFromCsvFile",
+      "summary": "Start Bulk User Import",
+      "category_id": 2,
+      "tag_id": 3,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/SubmitUploadedFile",
+      "summary": "Advance Bulk User Import",
+      "category_id": 2,
+      "tag_id": 3,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/GetUser",
+      "summary": "Get user details",
+      "category_id": 2,
+      "tag_id": 4,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/GetUserByName",
+      "summary": "Get user details by name",
+      "category_id": 2,
+      "tag_id": 4,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/GetUsers",
+      "summary": "Get users details",
+      "category_id": 2,
+      "tag_id": 4,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/UpdateBaseProfile",
+      "summary": "Update Base Profile",
+      "category_id": 2,
+      "tag_id": 4,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/GetUserAttributes",
+      "summary": "Get user attributes",
+      "category_id": 2,
+      "tag_id": 5,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/UpdateUserAttributes",
+      "summary": "Update user attributes",
+      "category_id": 2,
+      "tag_id": 5,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/ChangeUser",
+      "summary": "Update user",
+      "category_id": 2,
+      "tag_id": 6,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/SetPassword",
+      "summary": "Set user password",
+      "category_id": 2,
+      "tag_id": 7,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/GetUserPicture",
+      "summary": "Get user picture",
+      "category_id": 2,
+      "tag_id": 8,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/SetUserPicture",
+      "summary": "Set user picture",
+      "category_id": 2,
+      "tag_id": 8,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/DeleteUser",
+      "summary": "Delete user",
+      "category_id": 2,
+      "tag_id": 9,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/CDirectoryService/LockedUsersReport",
+      "summary": "Get locked users",
+      "category_id": 2,
+      "tag_id": 10,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/cdirectory-service-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/DeleteTenantConfig",
+      "summary": "Delete tenant configuration",
+      "category_id": 3,
+      "tag_id": 11,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/GetTenantConfig",
+      "summary": "Get tenant configuration",
+      "category_id": 3,
+      "tag_id": 11,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/SetTenantConfig",
+      "summary": "Set tenant configuration",
+      "category_id": 3,
+      "tag_id": 11,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/GeneratePassword",
+      "summary": "Generate Password",
+      "category_id": 3,
+      "tag_id": 12,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/GetAssignedAdministrativeRights",
+      "summary": "Get assigned administrative rights associated of role",
+      "category_id": 3,
+      "tag_id": 13,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/GetUserSettings",
+      "summary": "Get user settings",
+      "category_id": 3,
+      "tag_id": 14,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/SetUserSettings",
+      "summary": "Set user settings",
+      "category_id": 3,
+      "tag_id": 14,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/AddAliases",
+      "summary": "Add tenant aliases",
+      "category_id": 3,
+      "tag_id": 15,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/GetAliases",
+      "summary": "Get tenant aliases",
+      "category_id": 3,
+      "tag_id": 15,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Core/DeleteAliases",
+      "summary": "Delete tenant aliases",
+      "category_id": 3,
+      "tag_id": 15,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/core-api"
+    },
+    {
+      "method": "POST",
+      "path": "/AuthProfile/DeleteProfile",
+      "summary": "Delete authentication profile",
+      "category_id": 4,
+      "tag_id": 16,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/auth-profile-api"
+    },
+    {
+      "method": "POST",
+      "path": "/AuthProfile/GetProfile",
+      "summary": "Get authentication profile",
+      "category_id": 4,
+      "tag_id": 16,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/auth-profile-api"
+    },
+    {
+      "method": "POST",
+      "path": "/AuthProfile/GetProfileMFAScoring",
+      "summary": "Gets authentication assurance level",
+      "category_id": 4,
+      "tag_id": 16,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/auth-profile-api"
+    },
+    {
+      "method": "POST",
+      "path": "/AuthProfile/SaveProfile",
+      "summary": "Set authentication profile",
+      "category_id": 4,
+      "tag_id": 16,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/auth-profile-api"
+    },
+    {
+      "method": "POST",
+      "path": "/ExtData/GetSchema",
+      "summary": "Get Schema",
+      "category_id": 5,
+      "tag_id": 17,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/ext-data-api"
+    },
+    {
+      "method": "POST",
+      "path": "/ExtData/GetColumns",
+      "summary": "Get additional attributes",
+      "category_id": 5,
+      "tag_id": 17,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/ext-data-api"
+    },
+    {
+      "method": "POST",
+      "path": "/ExtData/SetColumns",
+      "summary": "Set additional attributes",
+      "category_id": 5,
+      "tag_id": 17,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/ext-data-api"
+    },
+    {
+      "method": "POST",
+      "path": "/ExtData/UpdateSchema",
+      "summary": "Add additional attributes",
+      "category_id": 5,
+      "tag_id": 18,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/ext-data-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/SignOutCurrentSession",
+      "summary": "Sign out from current session",
+      "category_id": 6,
+      "tag_id": 19,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/SignOutEverywhere",
+      "summary": "Sign out from everywhere",
+      "category_id": 6,
+      "tag_id": 19,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/ResetSecurityQuestions",
+      "summary": "Reset security questions",
+      "category_id": 6,
+      "tag_id": 20,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/GetSecurityQuestions",
+      "summary": "Get security questions",
+      "category_id": 6,
+      "tag_id": 20,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/UpdateSecurityQuestions",
+      "summary": "Update security questions",
+      "category_id": 6,
+      "tag_id": 20,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/GetUserAttributes",
+      "summary": "Fetch attributes for a specified user.",
+      "category_id": 6,
+      "tag_id": 21,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/SetUserAttributes",
+      "summary": "Set attributes for a specified user.",
+      "category_id": 6,
+      "tag_id": 21,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/GetUserRolesAndAdministrativeRights",
+      "summary": "Get user roles and administrative rights",
+      "category_id": 6,
+      "tag_id": 22,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/ChangeUserPassword",
+      "summary": "Change user password",
+      "category_id": 6,
+      "tag_id": 23,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/ForgotPassword",
+      "summary": "Forgot password",
+      "category_id": 6,
+      "tag_id": 23,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/ResetUserPassword",
+      "summary": "Reset user password",
+      "category_id": 6,
+      "tag_id": 23,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/VerifyPasswordReset",
+      "summary": "Verify password reset",
+      "category_id": 6,
+      "tag_id": 23,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/SetMobileAuthenticator",
+      "summary": "Set Mobile Authenticator",
+      "category_id": 6,
+      "tag_id": 24,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/GetMobileAuthenticator",
+      "summary": "Get Mobile Authenticator",
+      "category_id": 6,
+      "tag_id": 24,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/VerifyTotp",
+      "summary": "Verify TOTP code",
+      "category_id": 6,
+      "tag_id": 24,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/GetPhonePin",
+      "summary": "Get phone pin",
+      "category_id": 6,
+      "tag_id": 24,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/UnlockUser",
+      "summary": "Unlock user",
+      "category_id": 6,
+      "tag_id": 25,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/DeleteOathSoftwareToken",
+      "summary": "Delete Software OATH Token",
+      "category_id": 6,
+      "tag_id": 26,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/GetOathSoftwareTokenInfo",
+      "summary": "Get Software OATH Token",
+      "category_id": 6,
+      "tag_id": 26,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/UserMgmt/GetUserCloudLock",
+      "summary": "Get user cloud lock",
+      "category_id": 6,
+      "tag_id": 27,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-mgmt-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Roles/StoreRole",
+      "summary": "Create Role",
+      "category_id": 7,
+      "tag_id": 28,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/roles-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Roles/UpdateRole",
+      "summary": "Update role",
+      "category_id": 7,
+      "tag_id": 28,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/roles-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Roles/AssignSuperRights",
+      "summary": "Assign administrative rights to role",
+      "category_id": 7,
+      "tag_id": 28,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/roles-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Roles/UnAssignSuperRights",
+      "summary": "Unassign administrative rights for role",
+      "category_id": 7,
+      "tag_id": 28,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/roles-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Roles/GetRole",
+      "summary": "Get role",
+      "category_id": 7,
+      "tag_id": 28,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/roles-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Roles/GetRoleMembers",
+      "summary": "Get role members",
+      "category_id": 7,
+      "tag_id": 28,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/roles-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Roles/SetDynamicRoleScript",
+      "summary": "Set script of dynamic role",
+      "category_id": 7,
+      "tag_id": 28,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/roles-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Roles/DeleteRole",
+      "summary": "Delete role",
+      "category_id": 7,
+      "tag_id": 28,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/roles-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantCnames/Get",
+      "summary": "Get a list of the Cnames assigned to the tenant",
+      "category_id": 8,
+      "tag_id": 29,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-cnames-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantCnames/Register",
+      "summary": "Creates a Cname with prefix specified for the tenant",
+      "category_id": 8,
+      "tag_id": 29,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-cnames-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantCnames/SetPreferred",
+      "summary": "Sets the tenant Cname to preferred as Cname",
+      "category_id": 8,
+      "tag_id": 29,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-cnames-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantCnames/UiGet",
+      "summary": "Gets the tenant Cnames",
+      "category_id": 8,
+      "tag_id": 29,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-cnames-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantCnames/UnRegister",
+      "summary": "Delete a tenant URL",
+      "category_id": 8,
+      "tag_id": 29,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-cnames-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Policy/DeletePolicyBlock",
+      "summary": "Delete policy",
+      "category_id": 9,
+      "tag_id": 30,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/policy-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Policy/GetNicePlinks",
+      "summary": "Gets policy links.",
+      "category_id": 9,
+      "tag_id": 30,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/policy-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Policy/GetPasswordComplexityRequirements",
+      "summary": "Get password complexity requirements",
+      "category_id": 9,
+      "tag_id": 30,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/policy-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Policy/GetPolicyBlock",
+      "summary": "Get policy block",
+      "category_id": 9,
+      "tag_id": 30,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/policy-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Policy/SavePolicyBlock3",
+      "summary": "Set policy",
+      "category_id": 9,
+      "tag_id": 30,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/policy-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/AnswerOOBChallenge",
+      "summary": "Answer out-of-band challenge",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/StartAuthentication",
+      "summary": "Start authentication",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/AdvanceAuthentication",
+      "summary": "Advance authentication",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/StartQRCodeAuthentication",
+      "summary": "Start QR code authentication",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/SubmitOathOtpCode",
+      "summary": "Submit OATH OTP code",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/StartSocialAuthentication",
+      "summary": "Start social authentication",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/StartChallenge",
+      "summary": "Start social authentication challenge",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/AdvanceSocialAuthentication",
+      "summary": "Advance social authentication",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/AnswerFidoChallenge",
+      "summary": "Answer FIDO challenge",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/AnswerPhoneChallenge",
+      "summary": "Answer phone challenge",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/AnswerSecurityQuestion",
+      "summary": "Answer security question",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/AnswerEmailChallenge",
+      "summary": "Answer email challenge",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/LoginByPhoneApp",
+      "summary": "Login by phone app",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Security/LoginByCheckMarks",
+      "summary": "Login by check marks",
+      "category_id": 10,
+      "tag_id": 31,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/security-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantConfig/GetEditableMessageTemplate",
+      "summary": "Get editable message template",
+      "category_id": 11,
+      "tag_id": 32,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-config-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantConfig/GetEditableMessageTemplates",
+      "summary": "Get editable message templates",
+      "category_id": 11,
+      "tag_id": 32,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-config-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantConfig/SetCustomerConfig",
+      "summary": "Set tenant custom configuration.",
+      "category_id": 11,
+      "tag_id": 33,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-config-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantConfig/GetCustomerConfig",
+      "summary": "Get tenant custom configuration",
+      "category_id": 11,
+      "tag_id": 33,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-config-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantConfig/GetAdminSecurityQuestion",
+      "summary": "Get security question",
+      "category_id": 11,
+      "tag_id": 34,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-config-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantConfig/DeleteAdminSecurityQuestion",
+      "summary": "Delete security question",
+      "category_id": 11,
+      "tag_id": 34,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-config-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantConfig/GetAdminSecurityQuestions",
+      "summary": "Get security questions",
+      "category_id": 11,
+      "tag_id": 34,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-config-api"
+    },
+    {
+      "method": "POST",
+      "path": "/TenantConfig/SetAdminSecurityQuestion",
+      "summary": "Add or update security question",
+      "category_id": 11,
+      "tag_id": 34,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/tenant-config-api"
+    },
+    {
+      "method": "GET",
+      "path": "/users/{userId}",
+      "summary": "Get User Info by User ID",
+      "category_id": 12,
+      "tag_id": 35,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/users",
+      "summary": "Create New User",
+      "category_id": 12,
+      "tag_id": 35,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/DownloadImportAccountsLogFile",
+      "summary": "Downloads logs for the imported accounts file.",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/uprest/updatecaptureduserapplication",
+      "summary": "update captured user application .",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/setusercredsforapp",
+      "summary": "Set user credentials for an application.",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/getresultantappsforuser",
+      "summary": "Get applications for user",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/getresultantapps",
+      "summary": "Get applications for role",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/deleteapplicationaccount",
+      "summary": "Delete application account",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/importaccountsbyfile",
+      "summary": "Import application accounts from file",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/getapplicationaccounts",
+      "summary": "Get accounts for an application",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/exportapplicationaccounts",
+      "summary": "Export application accounts",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/setapplicationaccounts",
+      "summary": "Set application accounts",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/addapplicationaccount",
+      "summary": "Add an account for an application",
+      "category_id": 12,
+      "tag_id": 36,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/getroleforsecureditem",
+      "summary": "Get roles for secured items",
+      "category_id": 12,
+      "tag_id": 37,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/addsecureditem",
+      "summary": "Add secured item",
+      "category_id": 12,
+      "tag_id": 37,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/addappforsecureditem",
+      "summary": "Add an application to a secured item",
+      "category_id": 12,
+      "tag_id": 37,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/deletesecureditem",
+      "summary": "Delete secured item",
+      "category_id": 12,
+      "tag_id": 37,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/updatesecureditem",
+      "summary": "Update secured item",
+      "category_id": 12,
+      "tag_id": 37,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/getsecureditems",
+      "summary": "Get secured items",
+      "category_id": 12,
+      "tag_id": 37,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/addroleforsecureditem",
+      "summary": "Add role to a secured item",
+      "category_id": 12,
+      "tag_id": 37,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/deleteroleforsecureditem",
+      "summary": "Delete role from a secured item",
+      "category_id": 12,
+      "tag_id": 37,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/GetUPData",
+      "summary": "Get user portal data",
+      "category_id": 12,
+      "tag_id": 38,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/GetAppImage",
+      "summary": "Get application image",
+      "category_id": 12,
+      "tag_id": 38,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/GetFavorites",
+      "summary": "Get favorite apps",
+      "category_id": 12,
+      "tag_id": 38,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/SetFavorites",
+      "summary": "Set favorite apps",
+      "category_id": 12,
+      "tag_id": 38,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/uprest/GetOTP",
+      "summary": "Get one-time password",
+      "category_id": 12,
+      "tag_id": 38,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/up-rest-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetOpenIdClientSecret",
+      "summary": "Get Client Secret for an OIDC Web App",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetApplication",
+      "summary": "Get application details",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/UpdateApplicationDE",
+      "summary": "Update application.",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetAppIDByServiceName",
+      "summary": "Gets the ID of an app from its service name",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/SetApplicationPermissions",
+      "summary": "Set application permissions",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/ImportAppFromTemplate",
+      "summary": "Import apps from template",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetBrowserExtensionReport",
+      "summary": "Get browser extension report",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetApplicationsReport",
+      "summary": "Get applications report",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetInternalApplication",
+      "summary": "Get internal application",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetMDServiceList",
+      "summary": "Get metadata service list",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/AddNewWebAppByTemplate",
+      "summary": "Add web app from template",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetApplicationsByType",
+      "summary": "Get applications by type",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/DeleteApplication",
+      "summary": "Delete application",
+      "category_id": 13,
+      "tag_id": 39,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetCertificateByName",
+      "summary": "Get certificate",
+      "category_id": 13,
+      "tag_id": 40,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SaasManage/GetActiveDirectories",
+      "summary": "Get active directory connections",
+      "category_id": 13,
+      "tag_id": 41,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/saas-manage-api"
+    },
+    {
+      "method": "POST",
+      "path": "/U2f/AnswerRegistrationChallenge",
+      "summary": "Answer registration challenge",
+      "category_id": 14,
+      "tag_id": 42,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/u2f-api"
+    },
+    {
+      "method": "POST",
+      "path": "/U2f/DeleteU2fDevices",
+      "summary": "Delete U2f devices",
+      "category_id": 14,
+      "tag_id": 43,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/u2f-api"
+    },
+    {
+      "method": "POST",
+      "path": "/U2f/GetU2fDevices",
+      "summary": "Get U2f devices",
+      "category_id": 14,
+      "tag_id": 43,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/u2f-api"
+    },
+    {
+      "method": "POST",
+      "path": "/U2f/GetU2fDevicesForUser",
+      "summary": "Get U2f devices for user",
+      "category_id": 14,
+      "tag_id": 43,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/u2f-api"
+    },
+    {
+      "method": "POST",
+      "path": "/U2f/GetRegistrationChallenge",
+      "summary": "Get registration challenge",
+      "category_id": 14,
+      "tag_id": 43,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/u2f-api"
+    },
+    {
+      "method": "POST",
+      "path": "/device/enrollandroiddevice",
+      "summary": "Enroll Android device",
+      "category_id": 15,
+      "tag_id": 44,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/device-api"
+    },
+    {
+      "method": "POST",
+      "path": "/device/enrolliosdevice",
+      "summary": "Enroll iOS Device",
+      "category_id": 15,
+      "tag_id": 44,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/device-api"
+    },
+    {
+      "method": "POST",
+      "path": "/mobile/deletedevice",
+      "summary": "Delete a device (Mobile + OSX)",
+      "category_id": 16,
+      "tag_id": 45,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/mobile-api"
+    },
+    {
+      "method": "POST",
+      "path": "/mobile/removedeviceprofile",
+      "summary": "Unenroll a device (Mobile + OSX)",
+      "category_id": 16,
+      "tag_id": 45,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/mobile-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/Create",
+      "summary": "Create organization",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/Delete",
+      "summary": "Delete organization",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/Get",
+      "summary": "Get organization details",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/Update",
+      "summary": "Update organization",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/GetAdministrators",
+      "summary": "Get administrators",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/GetPermission",
+      "summary": "Get administrative rights",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/GetRoles",
+      "summary": "Get organization roles",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/AddMembers",
+      "summary": "Add role members",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/RemoveMembers",
+      "summary": "Remove members from role",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/ListOrgs",
+      "summary": "List organizations",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Org/GetOrgs",
+      "summary": "Get organizations",
+      "category_id": 17,
+      "tag_id": 46,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/org-api"
+    },
+    {
+      "method": "POST",
+      "path": "/User/UpdateProfile",
+      "summary": "Update user profile",
+      "category_id": 18,
+      "tag_id": 47,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-api"
+    },
+    {
+      "method": "POST",
+      "path": "/User/Signup",
+      "summary": "Signup external users",
+      "category_id": 18,
+      "tag_id": 48,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/user-api"
+    },
+    {
+      "method": "POST",
+      "path": "/SysInfo/About",
+      "summary": "Get tenant information",
+      "category_id": 19,
+      "tag_id": 49,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/sysinfo-api"
+    },
+    {
+      "method": "POST",
+      "path": "/JobFlow/DeleteJob",
+      "summary": "Delete workflow job",
+      "category_id": 20,
+      "tag_id": 50,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/job-flow-api"
+    },
+    {
+      "method": "POST",
+      "path": "/JobFlow/Event",
+      "summary": "Send workflow event",
+      "category_id": 20,
+      "tag_id": 50,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/job-flow-api"
+    },
+    {
+      "method": "POST",
+      "path": "/JobFlow/GetJobs",
+      "summary": "Get workflow jobs",
+      "category_id": 20,
+      "tag_id": 50,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/job-flow-api"
+    },
+    {
+      "method": "POST",
+      "path": "/JobFlow/GetMyJobs",
+      "summary": "Get user workflow jobs",
+      "category_id": 20,
+      "tag_id": 50,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/job-flow-api"
+    },
+    {
+      "method": "POST",
+      "path": "/JobFlow/StartJob",
+      "summary": "Start workflow job",
+      "category_id": 20,
+      "tag_id": 50,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/job-flow-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Task/JobReport",
+      "summary": "Get job report",
+      "category_id": 21,
+      "tag_id": 51,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/task-api"
+    },
+    {
+      "method": "POST",
+      "path": "/Task/CancelJob",
+      "summary": "Cancel job",
+      "category_id": 21,
+      "tag_id": 51,
+      "deprecated": 0,
+      "base_url": "https://{tenant}/api",
+      "doc_reference": "https://api-docs.cyberark.com/identity-docs-api/docs/task-api"
+    }
+  ]
+}
