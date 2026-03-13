@@ -1,6 +1,19 @@
 # CyberArk API Reference Databases
 
-Offline-searchable SQLite databases of CyberArk REST API endpoints with FTS5 full-text search.
+Offline-searchable SQLite databases covering **534 CyberArk REST API endpoints** across Identity, Privilege Cloud, and PAM Self-Hosted — with FTS5 full-text search built in.
+
+## Built for AI Agents
+
+These databases are specifically designed to be loaded by AI agents and assistants — such as **Claude** (via MCP tools or file context), **OpenClaw**, **LangChain**, or any LLM-based automation — to give them instant, structured knowledge of CyberArk APIs.
+
+Instead of pasting API docs into prompts or relying on the model's training data, you can point your agent at these lightweight SQLite files and let it query endpoints, methods, paths, and categories on the fly. This makes it easy to build agents that can:
+
+- Look up the correct API endpoint for any CyberArk operation
+- Construct valid API calls with the right HTTP method, path, and base URL
+- Discover related endpoints by searching across categories
+- Work offline without needing access to CyberArk's documentation portal
+
+Each database is self-contained (no external dependencies), typically under 150 KB, and includes a full-text search index for fast semantic lookups.
 
 ## Databases
 
@@ -14,7 +27,7 @@ Offline-searchable SQLite databases of CyberArk REST API endpoints with FTS5 ful
 
 ```bash
 # Clone and build
-git clone https://github.com/YOUR_USER/cyberark-api-tools.git
+git clone git@github.com:MaskoFortwana/CyberArk-APIs-For-Agents.git
 cd cyberark-api-tools
 python build_databases.py
 
