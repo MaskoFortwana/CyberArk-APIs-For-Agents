@@ -1,4 +1,5 @@
-# Built databases (regenerate with: python build_databases.py)
+# Generated data (run: python fetch_data.py)
+data/
 *.db
 
 # Python

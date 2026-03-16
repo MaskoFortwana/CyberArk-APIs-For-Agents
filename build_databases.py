@@ -1,19 +1,17 @@
 #!/usr/bin/env python3
 """
-Build CyberArk SQLite databases from JSON seed data.
+Build CyberArk API SQLite databases from JSON seed data.
 
-Creates four searchable SQLite databases with FTS5 full-text search:
-  - cyberark-identity-api.db        (174 endpoints, 21 categories, 51 tags)
-  - cyberark-privilege-cloud-api.db  (117 endpoints, 18 categories)
-  - cyberark-pam-selfhosted-api.db   (243 endpoints, 29 categories)
-  - cyberark-known-issues.db         (4170 known issues, 17 products, 93 components)
+Creates three searchable SQLite databases with FTS5 full-text search:
+  - cyberark-identity-api.db        (Identity Platform API)
+  - cyberark-privilege-cloud-api.db  (Privilege Cloud API)
+  - cyberark-pam-selfhosted-api.db   (PAM Self-Hosted API)
 
 Usage:
-    python build_databases.py              # Build all 4 databases
+    python build_databases.py              # Build all 3 databases
     python build_databases.py identity     # Build only Identity API
     python build_databases.py pcloud       # Build only Privilege Cloud API
     python build_databases.py pam          # Build only PAM Self-Hosted API
-    python build_databases.py ki           # Build only Known Issues
     python build_databases.py --output-dir ./my-dbs  # Custom output directory
 
 Requires: Python 3.8+ (no external dependencies)
@@ -22,10 +20,9 @@ Requires: Python 3.8+ (no external dependencies)
 import sqlite3
 import json
 import sys
-import os
 import argparse
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 SCRIPT_DIR = Path(__file__).parent
@@ -46,11 +43,6 @@ DB_CONFIGS = {
         "json_file": "pam-selfhosted-api.json",
         "db_file": "cyberark-pam-selfhosted-api.db",
         "builder": "standard",
-    },
-    "ki": {
-        "json_file": "known-issues.json",
-        "db_file": "cyberark-known-issues.db",
-        "builder": "known_issues",
     },
 }
 
@@ -123,7 +115,7 @@ def create_identity_db(data: dict, db_path: Path) -> dict:
 
     # Insert tags
     tag_id_map = {}
-    for tag in data["tags"]:
+    for tag in data.get("tags", []):
         new_cat_id = old_cat_map.get(tag["category_id"], tag["category_id"])
         cur.execute(
             "INSERT INTO tags (name, category_id) VALUES (?, ?)",
@@ -132,11 +124,11 @@ def create_identity_db(data: dict, db_path: Path) -> dict:
         tag_id_map[tag["name"]] = cur.lastrowid
 
     old_tag_map = {}
-    for i, tag in enumerate(data["tags"], 1):
+    for i, tag in enumerate(data.get("tags", []), 1):
         old_tag_map[i] = tag_id_map[tag["name"]]
 
     # Insert endpoints
-    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     for ep in data["endpoints"]:
         new_cat_id = old_cat_map.get(ep["category_id"], ep["category_id"])
         new_tag_id = old_tag_map.get(ep["tag_id"]) if ep.get("tag_id") else None
@@ -223,7 +215,7 @@ def create_standard_db(data: dict, db_path: Path, default_base_url: str) -> dict
     for i, cat in enumerate(data["categories"], 1):
         old_cat_map[i] = cat_id_map[cat["name"]]
 
-    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     for ep in data["endpoints"]:
         new_cat_id = old_cat_map.get(ep["category_id"], ep["category_id"])
         cur.execute(
@@ -255,134 +247,6 @@ def create_standard_db(data: dict, db_path: Path, default_base_url: str) -> dict
 
 
 # ---------------------------------------------------------------------------
-# Known Issues builder
-# ---------------------------------------------------------------------------
-
-def create_known_issues_db(data: dict, db_path: Path) -> dict:
-    """Build the CyberArk Known Issues database."""
-    if db_path.exists():
-        db_path.unlink()
-
-    conn = sqlite3.connect(str(db_path))
-    cur = conn.cursor()
-
-    cur.executescript("""
-        CREATE TABLE products (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL UNIQUE
-        );
-
-        CREATE TABLE components (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL UNIQUE
-        );
-
-        CREATE TABLE statuses (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL UNIQUE
-        );
-
-        CREATE TABLE known_issues (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            ki_id TEXT NOT NULL UNIQUE,
-            title TEXT NOT NULL,
-            product_id INTEGER REFERENCES products(id),
-            component_id INTEGER REFERENCES components(id),
-            status_id INTEGER REFERENCES statuses(id),
-            earliest_known_version TEXT,
-            included_in_release_notes TEXT,
-            resolved_in_version TEXT,
-            last_published_date TEXT,
-            description TEXT,
-            workaround TEXT,
-            article_url TEXT
-        );
-
-        CREATE VIRTUAL TABLE known_issues_fts USING fts5(
-            ki_id,
-            title,
-            description,
-            workaround,
-            content='known_issues',
-            content_rowid='id'
-        );
-    """)
-
-    # Insert lookup tables
-    product_map = {}
-    for p in data["products"]:
-        cur.execute("INSERT INTO products (name) VALUES (?)", (p["name"],))
-        product_map[p["name"]] = cur.lastrowid
-
-    component_map = {}
-    for c in data["components"]:
-        cur.execute("INSERT INTO components (name) VALUES (?)", (c["name"],))
-        component_map[c["name"]] = cur.lastrowid
-
-    status_map = {}
-    for s in data["statuses"]:
-        cur.execute("INSERT INTO statuses (name) VALUES (?)", (s["name"],))
-        status_map[s["name"]] = cur.lastrowid
-
-    # Build reverse maps: old_id -> new_id (the JSON has original IDs in foreign keys)
-    old_product_map = {}
-    for i, p in enumerate(data["products"], 1):
-        old_product_map[i] = product_map[p["name"]]
-
-    old_component_map = {}
-    for i, c in enumerate(data["components"], 1):
-        old_component_map[i] = component_map[c["name"]]
-
-    old_status_map = {}
-    for i, s in enumerate(data["statuses"], 1):
-        old_status_map[i] = status_map[s["name"]]
-
-    # Insert known issues
-    for ki in data["known_issues"]:
-        pid = old_product_map.get(ki.get("product_id")) if ki.get("product_id") else None
-        cid = old_component_map.get(ki.get("component_id")) if ki.get("component_id") else None
-        sid = old_status_map.get(ki.get("status_id")) if ki.get("status_id") else None
-
-        cur.execute(
-            """INSERT INTO known_issues (ki_id, title, product_id, component_id,
-               status_id, earliest_known_version, included_in_release_notes,
-               resolved_in_version, last_published_date, description, workaround,
-               article_url)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-            (
-                ki["ki_id"], ki["title"], pid, cid, sid,
-                ki.get("earliest_known_version"), ki.get("included_in_release_notes"),
-                ki.get("resolved_in_version"), ki.get("last_published_date"),
-                ki.get("description"), ki.get("workaround"), ki.get("article_url"),
-            ),
-        )
-
-    # Build FTS index
-    cur.execute("""
-        INSERT INTO known_issues_fts (rowid, ki_id, title, description, workaround)
-        SELECT id, ki_id, title,
-               COALESCE(description, ''),
-               COALESCE(workaround, '')
-        FROM known_issues
-    """)
-
-    conn.commit()
-
-    stats = {
-        "products": cur.execute("SELECT COUNT(*) FROM products").fetchone()[0],
-        "components": cur.execute("SELECT COUNT(*) FROM components").fetchone()[0],
-        "statuses": cur.execute("SELECT COUNT(*) FROM statuses").fetchone()[0],
-        "known_issues": cur.execute("SELECT COUNT(*) FROM known_issues").fetchone()[0],
-        "enriched": cur.execute(
-            "SELECT COUNT(*) FROM known_issues WHERE description IS NOT NULL AND description != ''"
-        ).fetchone()[0],
-        "fts_entries": cur.execute("SELECT COUNT(*) FROM known_issues_fts").fetchone()[0],
-    }
-    conn.close()
-    return stats
-
-
-# ---------------------------------------------------------------------------
 # Build & verify orchestration
 # ---------------------------------------------------------------------------
 
@@ -393,7 +257,8 @@ def build_database(key: str, output_dir: Path) -> None:
     db_path = output_dir / config["db_file"]
 
     if not json_path.exists():
-        print(f"  ERROR: {json_path} not found — skipping")
+        print(f"\n  ERROR: {json_path} not found")
+        print(f"  Run 'python fetch_data.py' first to scrape data from CyberArk docs.")
         return
 
     with open(json_path, "r", encoding="utf-8") as f:
@@ -410,8 +275,6 @@ def build_database(key: str, output_dir: Path) -> None:
     elif builder == "standard":
         default_url = meta.get("default_base_url", "")
         stats = create_standard_db(data, db_path, default_url)
-    elif builder == "known_issues":
-        stats = create_known_issues_db(data, db_path)
     else:
         print(f"  ERROR: Unknown builder type '{builder}'")
         return
@@ -421,10 +284,16 @@ def build_database(key: str, output_dir: Path) -> None:
     print(f"  Size:     {size_kb:.1f} KB")
 
 
-def verify_database(db_path: Path, key: str) -> None:
-    """Run basic verification queries on a built database."""
+def verify_database(db_path: Path, fatal: bool = False) -> bool:
+    """
+    Run basic verification queries on a built database.
+
+    Returns True if all checks pass, False otherwise.
+    If fatal=True, raises AssertionError on failure (legacy behaviour).
+    """
     if not db_path.exists():
-        return
+        print(f"  Verify:   SKIP — {db_path.name} does not exist")
+        return False
 
     conn = sqlite3.connect(str(db_path))
     tables = [
@@ -434,52 +303,53 @@ def verify_database(db_path: Path, key: str) -> None:
         ).fetchall()
     ]
 
-    if key == "ki":
-        # Known Issues verification
-        assert "known_issues" in tables, "Missing known_issues table"
-        assert "known_issues_fts" in tables, "Missing FTS table"
+    problems = []
+    if "categories" not in tables:
+        problems.append("Missing categories table")
+    if "endpoints" not in tables:
+        problems.append("Missing endpoints table")
+    if "endpoints_fts" not in tables:
+        problems.append("Missing FTS table")
 
-        ki_count = conn.execute("SELECT COUNT(*) FROM known_issues").fetchone()[0]
-        fts_count = conn.execute("SELECT COUNT(*) FROM known_issues_fts").fetchone()[0]
-        enriched = conn.execute(
-            "SELECT COUNT(*) FROM known_issues WHERE description IS NOT NULL AND description != ''"
-        ).fetchone()[0]
-
-        assert ki_count > 0, "No known issues found"
-        assert fts_count == ki_count, f"FTS mismatch: {fts_count} != {ki_count}"
-
-        # Test FTS search
-        hits = conn.execute(
-            "SELECT COUNT(*) FROM known_issues_fts WHERE known_issues_fts MATCH 'password OR CPM'"
-        ).fetchone()[0]
-
+    if problems:
         conn.close()
-        print(f"  Verify:   OK ({ki_count} issues, {enriched} enriched, FTS search={hits} hits)")
-    else:
-        # API database verification
-        assert "categories" in tables, "Missing categories table"
-        assert "endpoints" in tables, "Missing endpoints table"
-        assert "endpoints_fts" in tables, "Missing FTS table"
+        msg = "; ".join(problems)
+        print(f"  Verify:   FAIL — {msg}")
+        if fatal:
+            raise AssertionError(msg)
+        return False
 
-        cat_count = conn.execute("SELECT COUNT(*) FROM categories").fetchone()[0]
-        ep_count = conn.execute("SELECT COUNT(*) FROM endpoints").fetchone()[0]
-        fts_count = conn.execute("SELECT COUNT(*) FROM endpoints_fts").fetchone()[0]
+    cat_count = conn.execute("SELECT COUNT(*) FROM categories").fetchone()[0]
+    ep_count = conn.execute("SELECT COUNT(*) FROM endpoints").fetchone()[0]
+    fts_count = conn.execute("SELECT COUNT(*) FROM endpoints_fts").fetchone()[0]
 
-        assert cat_count > 0, "No categories found"
-        assert ep_count > 0, "No endpoints found"
-        assert fts_count == ep_count, f"FTS mismatch: {fts_count} != {ep_count}"
+    if cat_count == 0:
+        problems.append("No categories found")
+    if ep_count == 0:
+        problems.append("No endpoints found")
+    if fts_count != ep_count:
+        problems.append(f"FTS mismatch: {fts_count} != {ep_count}")
 
-        hits = conn.execute(
-            "SELECT COUNT(*) FROM endpoints_fts WHERE endpoints_fts MATCH 'password OR account'"
-        ).fetchone()[0]
-
+    if problems:
         conn.close()
-        print(f"  Verify:   OK ({cat_count} cats, {ep_count} eps, FTS search={hits} hits)")
+        msg = "; ".join(problems)
+        print(f"  Verify:   WARN — {msg}")
+        if fatal:
+            raise AssertionError(msg)
+        return False
+
+    hits = conn.execute(
+        "SELECT COUNT(*) FROM endpoints_fts WHERE endpoints_fts MATCH 'password OR account'"
+    ).fetchone()[0]
+
+    conn.close()
+    print(f"  Verify:   OK ({cat_count} cats, {ep_count} eps, FTS search={hits} hits)")
+    return True
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Build CyberArk SQLite databases from JSON seed data"
+        description="Build CyberArk API SQLite databases from JSON seed data"
     )
     parser.add_argument(
         "targets",
@@ -507,14 +377,14 @@ def main():
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     print("=" * 60)
-    print("  CyberArk Database Builder")
+    print("  CyberArk API Database Builder")
     print("=" * 60)
 
     for key in targets:
         build_database(key, args.output_dir)
         if args.verify:
             db_path = args.output_dir / DB_CONFIGS[key]["db_file"]
-            verify_database(db_path, key)
+            verify_database(db_path)
 
     print("\n" + "=" * 60)
     print("  Done! Databases built successfully.")

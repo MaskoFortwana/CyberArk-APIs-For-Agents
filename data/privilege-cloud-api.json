@@ -1,799 +1,270 @@
 {
   "metadata": {
     "name": "CyberArk Privilege Cloud API",
-    "description": "CyberArk Privilege Cloud (Shared Services) REST API endpoints",
+    "description": "CyberArk Privilege Cloud API REST API endpoints",
     "default_base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-    "source": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilegecloudapis/"
+    "source": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en",
+    "fetched_at": "2026-03-16T12:28:46.074670+00:00"
   },
   "categories": [
     {
-      "name": "Account Discovery",
-      "endpoint_count": 8
+      "name": "Placeholders in REST API Infrastructure",
+      "endpoint_count": 1
     },
     {
-      "name": "Account Groups",
-      "endpoint_count": 4
+      "name": "Privilege Cloud APIs",
+      "endpoint_count": 12
     },
     {
       "name": "Accounts",
-      "endpoint_count": 18
+      "endpoint_count": 14
     },
     {
-      "name": "Applications",
-      "endpoint_count": 7
-    },
-    {
-      "name": "Authentication",
-      "endpoint_count": 2
-    },
-    {
-      "name": "Bulk Upload Accounts",
-      "endpoint_count": 3
+      "name": "IP Allowlist",
+      "endpoint_count": 1
     },
     {
       "name": "Custom Ticketing Systems",
       "endpoint_count": 2
     },
     {
-      "name": "IP Allowlist",
+      "name": "User Management",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Platforms",
+      "endpoint_count": 28
+    },
+    {
+      "name": "Get account activity",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Safes",
+      "endpoint_count": 14
+    },
+    {
+      "name": "Generate password",
+      "endpoint_count": 0
+    },
+    {
+      "name": "Get secret versions",
+      "endpoint_count": 0
+    },
+    {
+      "name": "Server",
       "endpoint_count": 2
     },
     {
       "name": "Monitor Sessions",
-      "endpoint_count": 12
+      "endpoint_count": 10
     },
     {
-      "name": "Platforms",
-      "endpoint_count": 23
-    },
-    {
-      "name": "Private SSH Authentication",
-      "endpoint_count": 7
-    },
-    {
-      "name": "Requests",
-      "endpoint_count": 8
-    },
-    {
-      "name": "Safe Members",
-      "endpoint_count": 5
-    },
-    {
-      "name": "Safes",
-      "endpoint_count": 8
-    },
-    {
-      "name": "Server",
+      "name": "Applications",
       "endpoint_count": 3
     },
     {
-      "name": "Session Management",
-      "endpoint_count": 2
+      "name": "Authentication",
+      "endpoint_count": 3
+    },
+    {
+      "name": "Add onboarding rule",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Change credentials immediately",
+      "endpoint_count": 0
+    },
+    {
+      "name": "Change credentials in Privilege Cloud",
+      "endpoint_count": 0
+    },
+    {
+      "name": "Requests",
+      "endpoint_count": 6
+    },
+    {
+      "name": "Private SSH Authentication",
+      "endpoint_count": 3
+    },
+    {
+      "name": "Delete onboarding rule",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Update onboarding rule",
+      "endpoint_count": 0
+    },
+    {
+      "name": "Get onboarding rules",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Get password value",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Get recording details",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Get recording activities",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Get recording properties",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Get recordings",
+      "endpoint_count": 0
     },
     {
       "name": "System Health",
-      "endpoint_count": 2
+      "endpoint_count": 1
     },
     {
-      "name": "User Management",
+      "name": "Play recording",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Session Management",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Change credentials, set next password",
+      "endpoint_count": 0
+    },
+    {
+      "name": "Privilege Cloud system health details",
+      "endpoint_count": 1
+    },
+    {
+      "name": "Privilege Cloud system health summary",
       "endpoint_count": 1
     }
   ],
   "endpoints": [
     {
       "method": "GET",
-      "path": "/api/advanced-settings/ip-allowlist",
-      "summary": "Get IP allowlist",
-      "category_id": 8,
+      "path": "/PasswordVault/API/Users",
+      "summary": "Placeholders in REST API Infrastructure",
+      "category_id": 1,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilegecloudapis/privcloud-ip-allowlist-get-api.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/plugins/cpm-plugins-rest-api-placeholders.htm",
       "deprecated": 0
     },
     {
-      "method": "PUT",
-      "path": "/api/advanced-settings/ip-allowlist",
-      "summary": "Configure IP allowlist",
-      "category_id": 8,
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Verify/",
+      "summary": "13.2 Release notes",
+      "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilegecloudapis/privcloud-ip-allowlist-configure-api.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
-      "method": "GET",
-      "path": "/PasswordVault/API/licenses/pcloud",
-      "summary": "User licenses report",
-      "category_id": 18,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilegecloudapis/privcloud-user-licenses-report.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/ComponentsMonitoringSummary",
-      "summary": "Privilege Cloud system health summary",
-      "category_id": 17,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/systemsummary.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/ComponentsMonitoringDetails/{ComponentID}",
-      "summary": "Privilege Cloud system health details",
-      "category_id": 17,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/systemdetails.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
+      "method": "POST",
       "path": "/PasswordVault/API/verify",
-      "summary": "Verify",
-      "category_id": 15,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/server web services - verify.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/WebService/PIMService.svc/Logo?",
-      "summary": "Logo",
-      "category_id": 15,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/server web services - logo.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/WebService/PIMService.svc/Server",
-      "summary": "Server",
-      "category_id": 15,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/server web services - server.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Users/Secret/SSHKeys/Cache",
-      "summary": "Generate MFA caching SSH key for the connected user",
-      "category_id": 11,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/generate mfa caching ssh key.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Users/{userID}/Secret/SSHKeys/Cache",
-      "summary": "Generate MFA caching SSH key for another user",
-      "category_id": 11,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/generate mfa caching ssh key for another user.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/Users/Secret/SSHKeys/Cache",
-      "summary": "Delete MFA caching SSH key for connected user",
-      "category_id": 11,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete mfa caching ssh key.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/Users/{userID}/Secret/SSHKeys/Cache",
-      "summary": "Delete MFA caching SSH key for another user",
-      "category_id": 11,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete mfa caching ssh key for another user.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Users/Secret/SSHKeys/Cache",
-      "summary": "Get MFA caching SSH key for connected user",
-      "category_id": 11,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get mfa caching ssh key.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Users/{userID}/Secret/SSHKeys/Cache",
-      "summary": "Get MFA caching SSH key for another user",
-      "category_id": 11,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get mfa caching ssh key for another user.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Safes",
-      "summary": "Add Safe",
-      "category_id": 14,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add safe.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "PUT",
-      "path": "/PasswordVault/API/Safes/{SafeUrlId}",
-      "summary": "Update Safe",
-      "category_id": 14,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/update safe.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/Safes/{safeUrlId}",
-      "summary": "Delete Safe",
-      "category_id": 14,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete safe.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/WebService/PIMService.svc/Safes?query={Query}",
-      "summary": "Search for a Safe",
-      "category_id": 14,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/search-safe.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Safes",
-      "summary": "Get all Safes",
-      "category_id": 14,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-all-safes.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Safes/{SafeUrlId}",
-      "summary": "Get Safe details",
-      "category_id": 14,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get safe detaass.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Platforms/{PlatformID}/Safes",
-      "summary": "Get Safes by Platform",
-      "category_id": 14,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-safes-by-platform.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Safes/{safeUrlId}/Members",
-      "summary": "Add Safe member",
-      "category_id": 13,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add safe  member.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "PUT",
-      "path": "/PasswordVault/API/Safes/{SafeUrlId}",
-      "summary": "Update Safe member",
-      "category_id": 13,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/update safe   member.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/Safes/{SafeUrlId}/Members/{MemberName}/",
-      "summary": "Delete Safe member",
-      "category_id": 13,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete safe  member.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Safes/{SafeUrlId}/Members/",
-      "summary": "List Safe members",
-      "category_id": 13,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/list safe   members.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Safes/{SafeUrlId}/Members/{MemberName}/",
-      "summary": "Get Safe member",
-      "category_id": 13,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get safe   member.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/ConnectionComponents/Import",
-      "summary": "Import connection component",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/import connection component.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Logon",
-      "summary": "Logon",
-      "category_id": 5,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/authn-logon.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Auth/Logoff",
-      "summary": "Logoff",
-      "category_id": 5,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/authn-logoff.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Platforms",
-      "summary": "Get platforms",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Platforms/{PlatformName}",
-      "summary": "Get platform details",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-platform-details.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Platforms/Import",
-      "summary": "Import platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/import platform.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Platforms",
-      "summary": "Export platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/export platform.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/platforms/target",
-      "summary": "Get target platforms",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-targets.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/platforms/targets/{ID}/duplicate",
-      "summary": "Duplicate target platforms",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-duplicate-targets.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/platforms/targets/{ID}/activate/",
-      "summary": "Activate target platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-activate-targets.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/platforms/targets/{ID}/deactivate/",
-      "summary": "Deactivate target platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-deactivate-targets.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/platforms/targets/{ID}",
-      "summary": "Delete target platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-delete-targets.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/platforms/dependents",
-      "summary": "Get dependent platforms",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-dependents.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/platforms/dependent/{ID}/duplicate",
-      "summary": "Duplicate dependent platforms",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-duplicate-dependent-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/platforms/dependents/{ID}/",
-      "summary": "Delete dependent platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-delete-dependent-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/platforms/groups",
-      "summary": "Get group platforms",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/platforms/groups/{ID}/duplicate",
-      "summary": "Duplicate group platforms",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-duplicate-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/platforms/groups/{ID}/activate/",
-      "summary": "Activate group platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-activate-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/platforms/groups/{ID}/deactivate/",
-      "summary": "Deactivate group platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-deactivate-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/platforms/groups/{ID}/",
-      "summary": "Delete group platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-delete-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/platforms/rotationalGroups",
-      "summary": "Get rotational group platforms",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-rotational-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/duplicate",
-      "summary": "Duplicate rotational group platforms",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-duplicate-rotational-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/activate/",
-      "summary": "Activate rotational group platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-activate-rotational-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/deactivate/",
-      "summary": "Deactivate rotational group platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-deactivate-rotational-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}",
-      "summary": "Delete rotational group platform",
-      "category_id": 10,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-delete-rotational-group-platforms.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Accounts",
-      "summary": "Get accounts",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get accounts v10.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Accounts/{id}",
-      "summary": "Get account details",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get account details v10.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/Activities",
-      "summary": "Get account activity",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-account-activity.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/Secret/Versions",
-      "summary": "Get secret versions",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-secret-versions.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Accounts",
-      "summary": "Add account",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/addaccount v10.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/bulkactions/accounts",
-      "summary": "Create bulk upload of accounts",
-      "category_id": 6,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/create-bulk-account-upload-v10.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/bulkactions/accounts",
-      "summary": "Get all bulk account uploads for user",
-      "category_id": 6,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-all-bulk-account-uploads-for-user-v10.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/bulkactions/accounts/{id}",
-      "summary": "Get bulk account upload result",
-      "category_id": 6,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-bulk-account-upload-result-v10.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "PATCH",
-      "path": "/PasswordVault/API/Accounts/{AccountID}",
-      "summary": "Update account",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/updateaccount v10.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/Accounts/{id}",
-      "summary": "Delete account",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete account.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/AccountGroups?Safe=",
-      "summary": "Get account group by Safe",
-      "category_id": 14,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getaccountgroupbysafe.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/AccountGroups/{GroupID}/Members",
-      "summary": "Get account group members",
+      "summary": "13.2 Release notes",
       "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getaccountgroupmembers.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
-      "method": "POST",
-      "path": "/PasswordVault/API/AccountGroups",
-      "summary": "Add account group",
+      "method": "GET",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Logo",
+      "summary": "13.2 Release notes",
       "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/addaccountgroup.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/AccountGroups/{GroupID}/Members",
-      "summary": "Add member to account group",
+      "path": "/PasswordVault/WebServices/auth/Shared/RestfulAuthenticationService.svc/Logon/",
+      "summary": "13.2 Release notes",
       "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/addaccounttoaccountgroup.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/AccountGroups/{GroupID}/Members/{AccountID}",
-      "summary": "Delete member from account group",
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/auth/Shared/RestfulAuthenticationService.svc/Logoff/",
+      "summary": "13.2 Release notes",
       "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/deletememberfromaccountgroup.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/PSMConnect",
-      "summary": "Connect using PSM",
-      "category_id": 16,
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Safes/{SafeName}/Members/{MemberName}",
+      "summary": "13.2 Release notes",
+      "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/connect using psm.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/Accounts/AdAdHocConnect",
-      "summary": "Ad hoc connect using PSM",
-      "category_id": 16,
+      "path": "/PasswordVault/api/Safes/{SafeUrlId}/Members/{MemberName}/",
+      "summary": "13.2 Release notes",
+      "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/ad-hoc-connect using psm.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/Password/Retrieve",
-      "summary": "Get password value",
-      "category_id": 3,
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Accounts/{AccountID}",
+      "summary": "13.2 Release notes",
+      "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get account passwd val.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/Secret/Generate",
-      "summary": "Generate password",
-      "category_id": 3,
+      "path": "/PasswordVault/API/Accounts/{AccountID}/",
+      "summary": "13.2 Release notes",
+      "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/generate-password.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{accountId}/Secret/Retrieve",
-      "summary": "Retrieve private SSH key account",
-      "category_id": 11,
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Accounts/{AccountID}/VerifyCredentials",
+      "summary": "13.2 Release notes",
+      "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get private ssh key account.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/CheckIn",
-      "summary": "Check in an exclusive account",
-      "category_id": 3,
+      "path": "/PasswordVault/API/Accounts/",
+      "summary": "13.2 Release notes",
+      "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/check in exclusive acc ount.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-rns-2023-v13.2.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/Verify",
-      "summary": "Verify credentials",
-      "category_id": 3,
+      "path": "/auth/saml/logon",
+      "summary": "12.2 What's new",
+      "category_id": 2,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/verify cred.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege cloud/privcloud-whatsnew-v12.2.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/Change",
-      "summary": "Change credentials immediately",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/change credentials immediately.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/SetNextPassword",
-      "summary": "Change credentials, set next password",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/set next password.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/Change",
-      "summary": "Change credentials in Privilege Cloud",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/change-credentials-in-privilege-cloud.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{AccountID}/Reconcile",
-      "summary": "Reconcile credentials",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/recredentials.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/Accounts/{accountId}/LinkAccount",
-      "summary": "Link an account",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/link account.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/Accounts/{accountId}/LinkAccount/{extraPasswordIndex}",
-      "summary": "Unlink an account",
-      "category_id": 3,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/unlink account.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/api/accounts/{account_id}/account-dependents",
+      "path": "/api/accounts/{account_id}/account-dependents/",
       "summary": "Account dependents",
       "category_id": 3,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
@@ -802,335 +273,893 @@
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/DiscoveredAccounts",
-      "summary": "Add discovered accounts",
-      "category_id": 1,
+      "path": "/api/advanced-settings/ip-allowlist",
+      "summary": "Configure IP allowlist",
+      "category_id": 4,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add-discovered accounts.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/DiscoveredAccounts",
-      "summary": "Get discovered accounts",
-      "category_id": 1,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-discovered accounts.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/DiscoveredAccounts/{id}",
-      "summary": "Get discovered account details",
-      "category_id": 1,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-discovered account details.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/DiscoveredAccounts",
-      "summary": "Delete discovered accounts",
-      "category_id": 1,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete-discovered accounts.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/AutomaticOnboardingRules",
-      "summary": "Get onboarding rules",
-      "category_id": 1,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get onboarding rules.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilegecloudapis/privcloud-ip-allowlist-configure-api.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/AutomaticOnboardingRules",
-      "summary": "Add onboarding rule",
-      "category_id": 1,
+      "path": "/PasswordVault/API/TicketingSystems/logs/{days}/{userId}",
+      "summary": "Custom ticketing system: Export logs",
+      "category_id": 5,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add onboarding rule.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "PUT",
-      "path": "/PasswordVault/API/AutomaticOnboardingRules/{RuleId}",
-      "summary": "Update onboarding rule",
-      "category_id": 1,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/update onboarding rule.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/AutomaticOnboardingRules/{ID}",
-      "summary": "Delete onboarding rule",
-      "category_id": 1,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete onboarding rule.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/MyRequests",
-      "summary": "Create an access request",
-      "category_id": 12,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/create access requests.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/MyRequests",
-      "summary": "Get my requests",
-      "category_id": 12,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get my requests.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/MyRequests/{RequestID}",
-      "summary": "Get details of My Requests",
-      "category_id": 12,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get my requests details.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "DELETE",
-      "path": "/PasswordVault/API/MyRequests/{RequestID}",
-      "summary": "Delete my request",
-      "category_id": 12,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete my request.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/incomingrequests",
-      "summary": "Get incoming requests",
-      "category_id": 12,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get incoming requests.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/incomingrequests/{RequestID}",
-      "summary": "Get details of incoming request",
-      "category_id": 12,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get incoming requests details.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/incomingrequests/{RequestID}/confirm",
-      "summary": "Confirm an access request",
-      "category_id": 12,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/confirm access requests.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "POST",
-      "path": "/PasswordVault/API/incomingrequests/{RequestID}/reject",
-      "summary": "Reject a request",
-      "category_id": 12,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/reject requests.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilegecloudapis/privcloud-ticketing-systems-custom-export-logs.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
       "path": "/PasswordVault/API/TicketingSystems/import",
       "summary": "Custom ticketing system: Import",
-      "category_id": 7,
+      "category_id": 5,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
       "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilegecloudapis/privcloud-ticketing-systems-custom-import.htm",
       "deprecated": 0
     },
     {
-      "method": "GET",
-      "path": "/PasswordVault/API/TicketingSystems/logs/{days}/{userId}",
-      "summary": "Custom ticketing system: Export logs",
+      "method": "POST",
+      "path": "/PasswordVault/API/licenses/pcloud/",
+      "summary": "User licenses report",
+      "category_id": 6,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilegecloudapis/privcloud-user-licenses-report.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Platforms/",
+      "summary": "Export platform",
       "category_id": 7,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilegecloudapis/privcloud-ticketing-systems-custom-export-logs.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/LiveSessions?Limit={#}&Sort={Recording",
-      "summary": "Get active sessions",
-      "category_id": 9,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get active sessions.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/livesessions/{liveSessionId}",
-      "summary": "Get active session",
-      "category_id": 9,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get active session.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/livesessions/{liveSessionId}/activities",
-      "summary": "Get active session activities",
-      "category_id": 9,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-active-session-activities.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/livesessions/{liveSessionId}/properties",
-      "summary": "Get active session properties",
-      "category_id": 9,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-active-session-properties.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/LiveSessions/{liveSessionId}/Monitor",
-      "summary": "Monitor an active session",
-      "category_id": 9,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/monitor session.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/exportplatform.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/LiveSessions/{liveSessionId}/{Action}",
-      "summary": "Suspend/resume an active session",
-      "category_id": 9,
+      "path": "/PasswordVault/API/Accounts/{AccountID}/Activities/",
+      "summary": "Get account activity",
+      "category_id": 8,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/suspend session.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/files - get file activity by id.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/LiveSessions/{liveSessionId}/Terminate",
-      "summary": "Terminate an active session",
-      "category_id": 9,
+      "path": "/PasswordVault/API/Accounts",
+      "summary": "Get accounts",
+      "category_id": 3,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/terminate session.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/getaccounts.htm",
       "deprecated": 0
     },
     {
       "method": "GET",
-      "path": "/PasswordVault/API/Recordings?Limit={#}&Sort={Recording",
-      "summary": "Get recordings",
-      "category_id": 9,
+      "path": "/PasswordVault/API/accounts",
+      "summary": "Get accounts",
+      "category_id": 3,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-recordings.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Recordings/{RecordingID}",
-      "summary": "Get recording details",
-      "category_id": 9,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-recording-details.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Recordings/{RecordingID}/properties",
-      "summary": "Get recording properties",
-      "category_id": 9,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-recording-properties.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/API/Recordings/{RecordingID}/activities",
-      "summary": "Get recording activities",
-      "category_id": 9,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-recording-activities.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/getaccounts.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/API/Recordings/{RecordingID}/Play",
-      "summary": "Play recording",
-      "category_id": 9,
+      "path": "/PasswordVault/API/platforms/groups/{ID}/activate/",
+      "summary": "Activate group platform",
+      "category_id": 7,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/play-recording.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/WebService/PIMService.svc/Applications?",
-      "summary": "Get applications",
-      "category_id": 4,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-appsl.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/WebService/PIMService.svc/Applications/{AppID}/",
-      "summary": "Get application details",
-      "category_id": 4,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-application details.htm",
-      "deprecated": 0
-    },
-    {
-      "method": "GET",
-      "path": "/PasswordVault/WebService/PIMService.svc/Applications/{AppID}/Authns",
-      "summary": "Get application authentication methods",
-      "category_id": 4,
-      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-application authn methods.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-activate-group-platform.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/WebService/PIMService.svc/Applications",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/activate/",
+      "summary": "Activate rotational group platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-activate-rotational-group-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/platforms/targets/{ID}/activate/",
+      "summary": "Activate target platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-activate-target-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/groups/{ID}/deactivate/",
+      "summary": "Deactivate group platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-deactivate-group-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/deactivate/",
+      "summary": "Deactivate rotational group platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-deactivate-rotational-group-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/platforms/targets/{ID}/deactivate/",
+      "summary": "Deactivate target platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-deactivate-target-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/dependents/{ID}/",
+      "summary": "Delete dependent platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-delete-dependent-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/groups/{ID}/",
+      "summary": "Delete group platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-delete-goup-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/",
+      "summary": "Delete rotational group platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-delete-rotational-group-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/platforms/targets/{ID}/",
+      "summary": "Delete target platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-delete-target-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/dependent/{ID}/duplicate/",
+      "summary": "Duplicate dependent platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-duplicate-dependent-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/groups/{ID}/duplicate/",
+      "summary": "Duplicate group platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-duplicate-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/{ID}/duplicate/",
+      "summary": "Duplicate rotational group platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-duplicate-rotational-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/platforms/targets/{ID}/duplicate/",
+      "summary": "Duplicate target platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-duplicate-target-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/dependents/",
+      "summary": "Get dependent platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-dependent-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/Platforms/Dependents",
+      "summary": "Get dependent platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-dependent-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/groups/",
+      "summary": "Get group platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/Platforms/Groups",
+      "summary": "Get group platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms",
+      "summary": "Get platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/platforms/rotationalGroups/",
+      "summary": "Get rotational group platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-rotational-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/Platforms/RotationalGroups",
+      "summary": "Get rotational group platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-rotational-group-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Platforms/{PlatformID}/Safes/",
+      "summary": "Get safes by platform ID",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-safe-by-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/api/Platforms/{PlatformID}/Safes",
+      "summary": "Get safes by platform ID",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-safe-by-platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/platforms/targets/",
+      "summary": "Get target platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-target-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Platforms/Targets",
+      "summary": "Get target platforms",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/rest-api-get-target-platforms.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Safes/{SafeUrlId}/Members/{MemberName}/",
+      "summary": "Get Safe member",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/safe members ws - list safe member.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/safes/Fin1Safe/members/Alex/",
+      "summary": "Get Safe member",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/safe members ws - list safe member.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Safes/{SafeUrlId}/Members/",
+      "summary": "Get all Safe members",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/safe members ws - list safe members.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/safes/BZ_I_87/members",
+      "summary": "Get all Safe members",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/safe members ws - list safe members.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Safes/{SafeName}/Members",
+      "summary": "Get all Safe members",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/safe members ws - list safe members.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Safes/{SafeUrlId}/",
+      "summary": "Get Safe details",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/safes web services - get safes details.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Safes/",
+      "summary": "Get all Safes",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/safes web services - list safes.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/api/safes",
+      "summary": "Get all Safes",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/safes web services - list safes.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Safes",
+      "summary": "Get all Safes",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/safes web services - list safes.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Server/",
+      "summary": "Server",
+      "category_id": 12,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/server web services - server.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/verify/",
+      "summary": "Verify",
+      "category_id": 12,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/server web services - verify.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/PSM/Connectors/",
+      "summary": "Get all connection components",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/session mngmnt - get_all_connection_components.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/PSM/Connectors",
+      "summary": "Get all connection components",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/session mngmnt - get_all_connection_components.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/PSM/Servers/",
+      "summary": "Get all PSM servers",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/session mngmnt - get_all_psm_servers.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/PSMServers",
+      "summary": "Get all PSM servers",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/session mngmnt - get_all_psm_servers.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Platforms/Targets/{PlatformId}/PrivilegedSessionManagement/",
+      "summary": "Get session management policy of platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/session mngmnt - get_session_management_policy_platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "GET",
+      "path": "/PasswordVault/API/Platforms/Targets/{PlatformId}/PrivilegedSessionManagement",
+      "summary": "Get session management policy of platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/sdk/session mngmnt - get_session_management_policy_platform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/",
       "summary": "Add application",
-      "category_id": 4,
+      "category_id": 14,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add-applications.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add application.htm",
       "deprecated": 0
     },
     {
       "method": "POST",
-      "path": "/PasswordVault/WebService/PIMService.svc/Applications/{AppID}/Authns",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/{AppID}/Authentications/",
       "summary": "Add application authentication method",
-      "category_id": 4,
+      "category_id": 15,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add-application authn.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add authentication.htm",
       "deprecated": 0
     },
     {
-      "method": "DELETE",
-      "path": "/PasswordVault/WebService/PIMService.svc/Applications/{AppID}",
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/{AppID}/Authentications",
+      "summary": "Add application authentication method",
+      "category_id": 15,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add authentication.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/DiscoveredAccounts/",
+      "summary": "Add discovered accounts",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add discovered account v10.8.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Safes/{safeUrlId}/Members/",
+      "summary": "Add Safe member",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add safe member.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AccountGroups/",
+      "summary": "Add account group",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add-account-group.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AccountGroups/{GroupID}/Members/",
+      "summary": "Add member to account group",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/add-account-to-account-group.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AutomaticOnboardingRules/",
+      "summary": "Add onboarding rule",
+      "category_id": 16,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/addautomaticonboardingrule.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/incomingrequests/{RequestID}/confirm",
+      "summary": "Confirm request",
+      "category_id": 19,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/confirmrequest.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/bulkactions/accounts/",
+      "summary": "Create bulk upload of accounts",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/create-bulk-upload-of-accounts-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/MyRequests",
+      "summary": "Create an access request",
+      "category_id": 19,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/createrequest.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/{AppID}/",
       "summary": "Delete application",
-      "category_id": 4,
+      "category_id": 14,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete-application.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete a specific application.htm",
       "deprecated": 0
     },
     {
-      "method": "DELETE",
-      "path": "/PasswordVault/WebService/PIMService.svc/Applications/{AppID}/Authns/{AuthID}",
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications/{AppID}/Authentications/{AuthID/}",
       "summary": "Delete application authentication method",
-      "category_id": 4,
+      "category_id": 15,
       "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
-      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete-application authn.htm",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete a specific authentication.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{id}/",
+      "summary": "Delete account",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/Secret/SSHKeys/ClearCache/",
+      "summary": "Delete all MFA caching SSH keys",
+      "category_id": 20,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete all mfa caching ssh keys.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/{userID}/Secret/SSHKeys/Cache/",
+      "summary": "Delete an MFA caching SSH key for another user",
+      "category_id": 20,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete mfa caching ssh key for another user.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Users/Secret/SSHKeys/Cache/",
+      "summary": "Delete an MFA caching SSH key",
+      "category_id": 20,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete mfa caching ssh key.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/Safes/Aviv/Members/AdminUser2/",
+      "summary": "Delete Safe member",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete safe member.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Safes/{safeUrlId}/",
+      "summary": "Delete Safe",
+      "category_id": 9,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/delete safe.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AutomaticOnboardingRules/{id}/",
+      "summary": "Delete onboarding rule",
+      "category_id": 21,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/deleteautoonboardingrule.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/myrequests/{RequestID}",
+      "summary": "Delete my request",
+      "category_id": 19,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/deletemyrequest.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/bulkactions/accounts/{id}/",
+      "summary": "Get bulk account upload result",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-bulk-account-upload-result-v10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/DiscoveredAccounts/{id}/",
+      "summary": "Get discovered account details",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/get-discovered-account-details.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AccountGroups",
+      "summary": "Get account group by Safe",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getaccountgroupbysafe.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/livesessions/{liveSessionId}/",
+      "summary": "Get active session",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getactivesession.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/livesessions/{liveSessionId}/activities/",
+      "summary": "Get active session activities",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getactivesessionactivities.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/livesessions/{liveSessionId}/properties/",
+      "summary": "Get active session properties",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getactivesessionproperties.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/AutomaticOnboardingRules/{",
+      "summary": "Get onboarding rules",
+      "category_id": 23,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getautoonboardingrules.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/incomingrequests/{requestID}",
+      "summary": "Get confirmation request details",
+      "category_id": 19,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getdetailsrequestconfirmation.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/IncomingRequests",
+      "summary": "Get incoming request list",
+      "category_id": 19,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getincomingrequestlist.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/LiveSessions",
+      "summary": "Get active sessions",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getlivesessions.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{accountId}/Password/Retrieve/",
+      "summary": "Get password value",
+      "category_id": 24,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getpasswordvaluev10.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Platforms/{PlatformName}",
+      "summary": "Get platform details",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getplatformdetails.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/recordings/{recordingId}/",
+      "summary": "Get recording details",
+      "category_id": 25,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getrecording.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/recordings/{recordingId}/activities/",
+      "summary": "Get recording activities",
+      "category_id": 26,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getrecordingactivities.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/recordings/{recordingId}/properties/",
+      "summary": "Get recording properties",
+      "category_id": 27,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/getrecordingproperties.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/ConnectionComponents/Import/",
+      "summary": "Import connection component",
+      "category_id": 29,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/importconncomponent.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Platforms/Import/",
+      "summary": "Import platform",
+      "category_id": 7,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/importplatform.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{accountId}/LinkAccount/{extraPasswordIndex}/",
+      "summary": "Unlink an account",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/link-account-unlink.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{accountId}/LinkAccount/",
+      "summary": "Link an account",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/link-account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/WebServices/PIMServices.svc/Applications",
+      "summary": "Get applications",
+      "category_id": 14,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/list applications.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/recordings/{recordingId}/Play/",
+      "summary": "Play recording",
+      "category_id": 30,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/playrecording.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/LiveSessions/{liveSessionId}/Monitor/",
+      "summary": "Monitor an active session",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/psm - monitor sessions.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/LiveSessions/",
+      "summary": "Terminate an active session",
+      "category_id": 13,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/pta-psm-terminatesession.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/incomingrequests/{RequestID}/reject",
+      "summary": "Reject request",
+      "category_id": 19,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/rejectrequest.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/{accountId}/Secret/Retrieve/",
+      "summary": "Retrieve private SSH key account",
+      "category_id": 3,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/retrieve_private_ssh_key_account.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/Accounts/AdHocConnect/",
+      "summary": "Ad hoc connect using PSM",
+      "category_id": 31,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/secureconnectpsm.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/ComponentsMonitoringDetails/{ComponentID}/",
+      "summary": "Privilege Cloud system health details",
+      "category_id": 33,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/systemdetails.htm",
+      "deprecated": 0
+    },
+    {
+      "method": "POST",
+      "path": "/PasswordVault/API/ComponentsMonitoringSummary/",
+      "summary": "Privilege Cloud system health summary",
+      "category_id": 34,
+      "base_url": "https://{subdomain}.privilegecloud.cyberark.cloud",
+      "doc_url": "https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/webservices/systemsummary.htm",
       "deprecated": 0
     }
   ]

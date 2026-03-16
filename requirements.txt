@@ -1,0 +1,4 @@
+# Required only for fetch_data.py (web scraping)
+# build_databases.py and search.py have no external dependencies
+requests>=2.28.0
+beautifulsoup4>=4.12.0
